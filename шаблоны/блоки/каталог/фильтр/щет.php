@@ -10,7 +10,14 @@
   $щет0 = 0;
   $щет1 = 0;
   foreach (explode ('^__^', $каталог) as $v0) {
+    if ($v0 == '') continue;
     $щет1++;
+    // Если элемент рекурсии есть в полном дереве
+      if (($полное_дерево = $_GET ['полное_дерево']) != '') {
+        if (!in_array (implode ('/', $папка = array_slice (explode ('/', explode ('^_^', $v0)[0]), 5, -2)), $полное_дерево)) {
+          continue;
+        }
+      }
     $i1 = explode ('^_^', $v0);
       if (($цены[0] > ($i2 = $i1[4])) or ($цены[1] < $i2))          continue;
       if (!str_contains ($бренды, $i1[3]))                          continue;
