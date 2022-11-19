@@ -100,31 +100,9 @@
           break;
         case 'категории_фильтра_каталога':
           if ($count_value == 1) continue;
-          if ($m1k0c < $m1k1c) {
-            $mass .= '{';
-          }
-          $mass .= '"' . $value . ':' . $slice . ':' . '"';
-          if ($m1k0c == $m1k1c) {
-            $mass .= ', ';
-          }
-          if ($m1k0c < $m1k1c) {
-            $mass .= ': [';
-          }
-          if ($m1k0c > $m1k1c) {
-            for ($i = 0; $i < ($m1k0c - $m1k1c); $i++) {
-              if ($m1k1c != 0) {
-                $mass .= ']}';
-              }
-            }
-            if ($m1k1c != 0) {
-              $mass .= ', ';
-            }
-          }
+          echo '<span путь="' . $value . '/" style="margin-left: ' . (($count_value - 1) * 20 - 20) . 'px; ">' . $slice . '</span>';
           break;
       }
-    }
-    if ($клас == 'категории_фильтра_каталога') {
-      echo '<script> массив_для_категорий_фильтра = [' . substr ($mass, 0, -3) . '</script>';
     }
   }
 ?>
