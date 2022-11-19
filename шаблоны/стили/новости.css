@@ -1,0 +1,48 @@
+.новости li {
+    overflow: hidden;
+    margin: auto;
+    max-width: var(--max-width);
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.новости .p1 {
+    font-size: 12px;
+    color: gray;
+}
+.новости a {
+    display: flex;
+    color: blue;
+    font-size: 18px;
+    margin: 10px 0 15px;
+}
+.новости img {
+    float: left;
+    width: 150px;
+    margin: 0 15px 15px 0;
+}
+.новости img + p {
+    font-size: 13px;
+    color: #575656;
+}
+.новость {
+    font-size: 14px;
+    margin: auto;
+    max-width: 1920px;
+    overflow: hidden;
+}
+.новость .p1 {
+    font-size: 13px;
+    color: gray;
+    margin-bottom: 20px;
+}
+.новость img:nth-child(2) {
+    float: left;
+    width: 300px;
+    margin: 0 20px 20px 0;
+}
+.новость p {
+    margin-bottom: 13px;
+    color: gray;
+}

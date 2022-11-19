@@ -1,0 +1,208 @@
+.hr0,.панель_сортировки_и_фильтра {
+  max-width: var(--max-width);
+  margin: auto;
+}
+.hr0 {
+  height: 1px;
+  background: #ebebeb;
+}
+ul.панель_сортировки_и_фильтра {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  padding: 25px 20px 10px;
+  position: relative;
+}
+.панель_сортировки_и_фильтра .a + form {
+  display: block;
+}
+.панель_сортировки_и_фильтра form {
+  display: none;
+  position: absolute;
+  background: #fff;
+  border: 1px solid #333;
+  border-radius: 5px;
+  z-index: 2;
+  padding: 10px;
+  width: 300px;
+  padding: 10px 20px 15px;
+}
+.панель_сортировки_и_фильтра i span {
+  vertical-align: 0;
+}
+.панель_сортировки_и_фильтра i {
+  cursor: pointer;
+  transition: all .2s;
+}
+.панель_сортировки_и_фильтра form i {
+  display: block;
+}
+.панель_сортировки_и_фильтра i:hover {
+  color: #1e807f;
+  fill: #1e807f;
+}
+.панель_сортировки_и_фильтра svg {
+  width: 30px;
+  height: 30px;
+  vertical-align: -10px;
+}
+.панель_сортировки_и_фильтра > :nth-child(2) {
+  text-align: right;
+}
+.панель_сортировки_и_фильтра form > p:first-child {
+  border: 0;
+  margin: 0;
+}
+.панель_сортировки_и_фильтра form > p {
+  display: flex;
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  transition: all .2s;
+}
+.панель_сортировки_и_фильтра > :nth-child(2) form {
+  right: 0;
+  text-align: left;
+}
+.панель_сортировки_и_фильтра form > p:hover {
+  color: #559f9e;
+}
+.панель_сортировки_и_фильтра form > p:hover * {
+  fill: #559f9e;
+}
+.панель_сортировки_и_фильтра :nth-child(1) form p svg {
+  transition: all .2s;
+	width: 25px;
+	height: 25px;
+	vertical-align: -10px;
+	border: 1px solid #333;
+	border-radius: 50%;
+}
+.панель_сортировки_и_фильтра form svg + svg,.панель_сортировки_и_фильтра form p + div,.панель_сортировки_и_фильтра form .a svg:nth-child(1) {
+  display: none;
+}
+.панель_сортировки_и_фильтра .a svg:nth-child(2) {
+  display: inherit;
+}
+.панель_сортировки_и_фильтра .a + div {
+  display: block;
+  position: relative;
+}
+.панель_сортировки_и_фильтра .toggleText:nth-child(2) {
+  justify-content: space-between;
+  margin: 10px;
+}
+.панель_сортировки_и_фильтра input {
+  width: calc(50% - 5px);
+  padding: 5px;
+  font-size: 16px;
+  color: gray;
+  border: 1px solid;
+  border-radius: 5px;
+}
+.панель_сортировки_и_фильтра input:nth-child(1) {
+  float: left;
+}
+.панель_сортировки_и_фильтра input:nth-child(1) {
+  float: right;
+}
+.панель_сортировки_и_фильтра .чекбоксы span:before {
+  content: "\e903";
+  border: 1px solid #1e807f;
+  background: #1e807f;
+  font: 9px 'icomoon';
+  color: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  border-radius: 3px;
+}
+.панель_сортировки_и_фильтра .чекбоксы span.a:before {
+  content: '';
+  border-.color: gray;
+  background: none;
+}
+.панель_сортировки_и_фильтра .чекбоксы span {
+  display: inline-flex;
+  width: calc(50% - 10px);
+  cursor: pointer;
+  font-size: 14px;
+  padding: 5px;
+}
+.панель_сортировки_и_фильтра .чекбоксы.чекбоксы_категорий span {
+  width: 100%;
+}
+.панель_сортировки_и_фильтра form div > p:nth-child(1),.панель_сортировки_и_фильтра form div p + p * {
+  padding: 2px;
+}
+.панель_сортировки_и_фильтра form div > p {
+  border: 1px solid gray;
+  position: relative;
+}
+.панель_сортировки_и_фильтра .toggleText > :first-child:after {
+  content: '';
+  display: block;
+  position: absolute;
+  inset: 6px 10px auto auto;
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+  height: 5px;
+  width: 5px;
+  transform: rotate(45deg);
+}
+.панель_сортировки_и_фильтра .toggleText p + p {
+  position: absolute;
+  z-index: 2;
+  background: #fff;
+  inset: 24px 0 auto 0;
+  display: none;
+}
+.панель_сортировки_и_фильтра .toggleText .a + p {
+  display: block;
+}
+.панель_сортировки_и_фильтра .toggleText p + p * {
+  cursor: pointer;
+  display: block;
+}
+.панель_сортировки_и_фильтра .toggleText p + p span:hover {
+  background: #1e807f;
+  color: #fff;
+}
+.панель_сортировки_и_фильтра button {
+  cursor: auto;
+	display: flex;
+	width: 100%;
+	margin-top: 10px;
+	border-radius: 5px;
+	justify-content: center;
+	align-items: center;
+	line-height: 40px;
+  font-size: 16px;
+}
+.панель_сортировки_и_фильтра button:hover {
+  background: #e9e9ed;
+}
+.панель_сортировки_и_фильтра button i {
+  cursor: auto;
+}
+.панель_сортировки_и_фильтра button i:hover {
+  color: #000;
+}
+.панель_сортировки_и_фильтра button svg {
+  margin: 0 15px;
+}
+.панель_сортировки_и_фильтра button i {
+  margin: 0 5px;
+}
+.панель_сортировки_и_фильтра button + * {
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid gray;
+}
+.панель_сортировки_и_фильтра button + button:hover {
+  background: #fff;
+}

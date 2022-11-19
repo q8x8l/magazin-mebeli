@@ -1,0 +1,61 @@
+﻿.Пагинация {
+    display: flex;
+    max-width: var(--max-width);
+    margin: auto;
+}
+.Пагинация > * {
+    margin: 20px;
+    border-radius: 10px;
+}
+.Пагинация .p1 {
+    transition: background .3s;
+    font-size: 16px;
+    background: #000;
+    color: #fff;
+    padding: 20px 30px;
+    top: 0px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.Пагинация .p1 :nth-child(2) {
+    display: none;
+}
+.Пагинация .p1:hover {
+	background: #666;
+}
+.Пагинация .p2 {
+    padding: 20px 30px;
+    text-align: right;
+    width: calc(100% - 40px);
+    border: 1px solid #e0e0e0;
+    font-size: 14px;
+}
+.Пагинация .p2 * {
+    margin: 20px;
+    color: #4b4e54;
+}
+.Пагинация .p2 i {
+    margin: 0;
+}
+.Пагинация .p2 i + * {
+    font-weight: 600;
+    border: 2px solid;
+    padding: 3px 4px;
+    border-radius: 50%;
+    margin: 0;
+}
+.Пагинация span {
+    position: relative;
+    top: -3px;
+}
+.Пагинация .s1 {
+    margin-right: 0;
+}
+.Пагинация .s2 {
+    margin-left: 0;
+}
+.Пагинация .s3 {
+    top: 0;
+    margin: 0;
+    color: red;
+}

@@ -1,0 +1,4 @@
+<svg>
+  <symbol viewBox="0 0 20 20" id="icon_shop_filter_plus" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.748 5.75a.75.75 0 00-1.5 0v3.499H5.75a.75.75 0 000 1.5h3.498v3.498a.75.75 0 001.5 0V10.75h3.5a.75.75 0 000-1.5h-3.5v-3.5z"></path></symbol>
+  <symbol viewBox="0 0 20 20" id="icon_shop_filter_minus" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 9.999a.75.75 0 01.75-.75h8.497a.75.75 0 010 1.5H5.75a.75.75 0 01-.75-.75z"></path></symbol>
+</svg>

@@ -1,0 +1,181 @@
+﻿.h1 {
+    font-size: 35px;
+    margin: 25px auto;
+    max-width: var(--max-width);
+    color: #333;
+    padding: 0 20px;
+}
+.лента_каталога {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: var(--max-width);
+    margin: auto;
+}
+.лента_каталога li {
+    margin: 20px;
+    position: relative;
+    display: inline-block;
+    max-width: 440px;
+    width: calc(25% - 40px);
+}
+.сдвиг_картинки * {
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+}
+.сдвиг_картинки {
+    position: relative;
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    padding-top: 75%;
+    margin-bottom: 15px;
+}
+.сдвиг_картинки:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .05);
+}
+.лента_каталога svg {
+    width: 50px;
+    height: 50px;
+}
+.лента_каталога .кнопка_быстрый_просмотр {
+    position: absolute;
+    top: calc(35% - 25px);
+    left: calc(50% - 25px);
+}
+.лента_каталога .кнопка_быстрый_просмотр svg {
+    background: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    opacity: 0;
+    scale: .5;
+    transition: all .2s;
+}
+.лента_каталога li > a:first-child:hover + p svg,.лента_каталога .кнопка_быстрый_просмотр:hover svg {
+    opacity: 1;
+    cursor: pointer;
+    scale: 1;
+}
+.лента_каталога .кнопка_быстрый_просмотр svg:hover {
+    fill: #1e807f;
+}
+.лента_каталога li > a:first-child + p svg:hover + * {
+	display: block;
+	position: absolute;
+	bottom: -40px;
+	font-size: 15px;
+	white-space: nowrap;
+	left: -50px;
+	background: #000;
+	color: #fff;
+	border-radius: 5px;
+	padding: 5px 10px;
+}
+.лента_каталога .кнопка_быстрый_просмотр span:after {
+    border: 5px solid transparent;
+    content: '';
+    border-bottom: 5px solid #000;
+    position: absolute;
+    top: -10px;
+    left: 46%;
+}
+.лента_каталога .кнопка_быстрый_просмотр span {
+    display: none;
+}
+.флаги {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 14px;
+}
+.флаги * {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+.флаги .новинка {
+    background: #5abf70;
+    color: #fff;
+}
+.флаги .акция {
+    background: #ffd043;
+}
+.флаги .скидка {
+    background: #cab69d;
+}
+.лента_каталога .p1 {
+    margin-bottom: 10;
+}
+.лента_каталога .p1 a {
+    font-size: 16px;
+    color: #000;
+    transition: all .2s;
+    border-bottom: 1px solid #fff;
+}
+.лента_каталога .p1 a:hover {
+    border-bottom: 1px solid #000;
+}
+.лента_каталога .p2 {
+    margin-bottom: 10;
+}
+.лента_каталога .p2 a {
+    font-size: 14px;
+    color: #0470c4;
+    transition: all .2s;
+    border-bottom: 1px solid #fff;
+}
+.лента_каталога .p2 :hover {
+    border-bottom: 1px solid #0470c4;
+}
+.цена_и_наличие {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.цена_исходник {
+  font-size: 0;
+}
+.цена_новая {
+    float: left;
+    font-size: 14px;
+    font-weight: 600;
+}
+.цена_новая * {
+    font-size: 22px;
+    vertical-align: 0;
+}
+.цена_старая {
+    font-size: 12px;
+    padding-left: 20px;
+    display: inline;
+    color: #939598;
+}
+.цена_старая * {
+    text-decoration: line-through;
+}
+.наличие {
+    float: right;
+    font-size: 14px;
+    background: #bde5c6;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+@media (max-width: 900px) {
+    .лента_каталога li {
+        width: calc(50% - 40px);
+    }
+}
+@media (max-width: 600px) {
+    .лента_каталога li {
+        width: calc(100% - 40px);
+    }
+    .лента_каталога {
+      justify-content: center;
+    }
+    .лента_каталога li > a:first-child {
+        text-align: left;
+    }
+}

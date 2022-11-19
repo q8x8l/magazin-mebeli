@@ -1,0 +1,38 @@
+.бренды_в_главной {
+    font-size: 35px;
+    color: #2e2f38;
+    background: var(--bg1);
+    padding: 60px 0 30px;
+}
+.бренды_в_главной + * {
+  background: #f8f8f7;
+  padding: 25px;
+}
+.бренды_в_главной + * > * {
+  max-width: var(--max-width);
+  margin: auto;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  background: #f8f8f7;
+  padding: 0 30px 30px;
+}
+.бренды_в_главной + * a:hover {
+    color: #1e807f;
+}
+.бренды_в_главной + * a {
+    transition: all .5s;
+    display: flex;
+    color: #333;
+    flex-direction: column;
+    padding: 15px;
+    background: #fff;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: space-between;
+}
+@media (max-width: 1100px) {
+    .бренды_в_главной,.бренды_в_главной + * {
+        display: none;
+    }
+}

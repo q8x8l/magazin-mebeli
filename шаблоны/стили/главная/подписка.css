@@ -1,0 +1,73 @@
+.подписка li:nth-child(1) {
+    width: 45%;
+}
+.подписка li:nth-child(2) {
+    width: 55%;
+}
+.подписка .p1 {
+    font-size: 30px;
+}
+.подписка p {
+    margin: 10px;
+}
+.подписка .p2 {
+    font-size: 19px;
+    text-align: center;
+}
+.подписка input:nth-child(1) {
+    border: 1px solid #a59581;
+    background: none;
+    width: calc(70% - 20px);
+}
+.подписка input:nth-child(2) {
+    border: 1px solid #a59581;
+    width: calc(30% - 20px);
+    background: #131313;
+    color: #fff;
+    border: 0;
+}
+.подписка form {
+    width: 100%;
+}
+.подписка input {
+    font-size: 16px;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 20px;
+}
+.подписка > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.подписка {
+    display: flex;
+    max-width: var(--max-width);
+    margin: auto;
+    border-radius: 10px;
+    background: #cab69d;
+    padding: 25px;
+}
+.подписка center {
+    font-size: 20px;
+    width: 100%;
+}
+@media (max-width: 900px) {
+    .подписка {
+        display: block;
+        margin: 25px;
+    }
+    .подписка li {
+        width: 100% !important;
+    }
+}
+@media (max-width: 500px) {
+    .подписка input {
+        display: block;
+        width: 100% !important;
+    }
+    .подписка input:nth-child(2) {
+        text-align: center;
+    }
+}

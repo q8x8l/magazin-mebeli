@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>Telegram–dark</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="soc_circle" transform="translate(-380.000000, -1000.000000)">
+            <g id="dark_theme" transform="translate(0.000000, 620.000000)">
+                <g id="Dark" transform="translate(80.000000, 79.000000)">
+                    <g id="Telegram–dark" transform="translate(300.000000, 301.000000)">
+                        <circle id="Oval" fill="#333333" cx="30" cy="30" r="30"/>
+                        <g id="Group-2" transform="translate(12.000000, 18.000000)" fill="#FFFFFF">
+                            <path d="M13.01,18.1025 L26.92115,5.54875 C27.531675,5.0069025 26.787825,4.742675 25.97735,5.23415 L8.8091,16.0654 L1.39335,13.750825 C-0.208125,13.260475 -0.219625,12.16 1.7529,11.368825 L30.6504,0.226075 C31.970225,-0.373125 33.2441,0.543075 32.74025,2.563125 L27.819,25.753875 C27.47535,27.40185 26.479625,27.795975 25.1,27.03475 L17.6033883,21.4961553 L14,25 C13.581375,25.407 13.25,25.75 12.5,25.75 L13.0104288,18.1028168 Z" id="Combined-Shape"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

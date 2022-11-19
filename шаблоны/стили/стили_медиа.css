@@ -1,0 +1,168 @@
+﻿@media (max-width: 1200px) {
+  header .выезджающее_меню {
+    position: fixed;
+    inset: 0 auto 0 0;
+    background: #fff;
+    font-size: 15px;
+    z-index: 4;
+    left: -100%;
+  }
+  header .выезджающее_меню > p {
+    padding: 0 30px;
+    border-bottom: 1px solid #ebebeb;
+  }
+  header .выезджающее_меню > p a {
+    margin-right: 30px;
+    display: inline-block;
+    padding: 10px 0;
+  }
+  header .выезджающее_меню > p .актив {
+    border-bottom: 2px solid #2e2f38;
+  }
+  header .выезджающее_меню ul + div,header .выезджающее_меню ul p {
+    display: none;
+  }
+  header .выезджающее_меню ul {
+    padding: 30px;
+    line-height: 35px;
+  }
+  header .выезджающее_меню .d:after {
+    content: '';
+    border-top: 2px solid;
+    border-right: 2px solid;
+    position: absolute;
+    inset: 40% 0 0 auto;
+    display: block;
+    width: 5px;
+    height: 5px;
+    transform: rotate(45deg);
+  }
+  header .выезджающее_меню a {
+    color: #171717;
+    display: block;
+    position: relative;
+  }
+  header .выезджающее_меню svg {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px 10px 0;
+  }
+  header .выезджающее_меню > svg {
+    position: absolute;
+    inset: 10px 0 auto auto;
+    height: 20px;
+    width: 20px;
+    z-index: 2;
+  }
+  header .контекстное_меню {
+    position: absolute;
+    inset: 0;
+    background: #fff;
+    width: 0;
+    overflow: hidden;
+    z-index: 1;
+    white-space: nowrap;
+  }
+  header .контекстное_меню > p:first-child {
+    background: #f8f8f7;
+    padding: 15px 30px;
+    position: relative;
+    color: gray;
+  }
+  header .контекстное_меню > p:first-child:before {
+    content: '';
+    border-top: 2px solid;
+    border-left: 2px solid;
+    position: absolute;
+    inset: 44% auto 0 15px;
+    display: block;
+    width: 5px;
+    height: 5px;
+    transform: rotate(-45deg);
+  }
+  header .контекстное_меню .титул {
+    font-weight: 600;
+    padding: 15px 30px;
+    line-height: 30px;
+  }
+  header .выезджающее_меню .контекстное_меню .суб_меню {
+    line-height: 30px;
+    padding: 0 30px;
+  }
+  header .блок_2 .звонки,header .блок_2 .адрес {
+    display: none;
+  }
+  header .блок_2 .логотип_и_описание {
+    margin: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 900px) {
+  .лента_каталога .кнопка_быстрый_просмотр {
+    display: none;
+  }
+  .товар_недели > :nth-child(1) {
+    padding: 0 0 0 20px;
+  }
+  .товар_недели .p2 {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+  .товар_недели .p3 {
+    margin-top: 15px;
+  }
+  .товар_недели .p5 {
+    margin-top: 15px;
+  }
+}
+@media (max-width: 700px) {
+  .товар_недели {
+    margin: 20px;
+  }
+  .товар_недели > * {
+    width: 100%;
+    padding: 0;
+  }
+  .товар_недели {
+    flex-direction: column;
+  }
+  .товар_недели > :nth-child(1) {
+    order: 2;
+  }
+  .товар_недели > :nth-child(1) {
+    padding: 25px;
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  header .блок_1 {
+    padding: 0 20px;
+  }
+  header .блок_2 {
+    padding: 20px;
+  }
+  .лента_каталога > button,.верхний_слайдер_главной .slider__control {
+    display: none !important;
+
+  }
+  .Пагинация .p1 :nth-child(1) {
+    display: none;
+  }
+  .Пагинация .p1 :nth-child(2) {
+    display: flex !important;
+  }
+  header .блок_1 div {
+    white-space: nowrap;
+  }
+  header .блок_1 div .щет {
+    vertical-align: 0;
+    margin-left: -20px;
+    font-size: 10px;
+  }
+  header .блок_1 .кнопки_адаптив svg:nth-child(1) {
+    display: inline;
+  }
+  header .блок_1 .кнопки_адаптив svg:nth-child(2),header .блок_1 .кнопки_адаптив svg:nth-child(3) {
+    display: none;
+  }
+}

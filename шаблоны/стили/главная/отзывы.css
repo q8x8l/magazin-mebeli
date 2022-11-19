@@ -1,0 +1,63 @@
+.отзывы_в_главной {
+    font-size: 35px;
+    color: #2e2f38;
+    font-weight: 600;
+    background: var(--bg1);
+    padding: 30px;
+    margin-top: 30px;
+}
+.отзывы_в_главной + * {
+    background: #f8f8f7;
+    padding: 25px;
+}
+.отзывы_в_главной + * > * {
+  display: flex;
+  justify-content: space-between;
+  max-width: var(--max-width);
+  margin: auto;
+}
+.отзывы_в_главной + * svg {
+    width: 30px;
+    height: 30px;
+    fill: #1e807f;
+}
+.отзывы_в_главной + * li {
+    width: calc(25% - 40px);
+    margin: 0 20px;
+    display: inline-block;
+    padding: 15px;
+    border-radius: 10px;
+    background: #fff;
+}
+.отзывы_в_главной + * i {
+    display: block;
+    font-size: 16px;
+}
+.отзывы_в_главной + * i:nth-child(1) {
+    text-align: center;
+}
+.отзывы_в_главной + * i:nth-child(2) {
+    color: gray;
+    margin: 20px 0;
+    line-height: 1.6;
+}
+.отзывы_в_главной + * i:nth-child(3) {
+    color: #424242;
+}
+@media (max-width: 1200px) {
+    .отзывы_в_главной + * {
+        display: block;
+        text-align: center;
+    }
+    .отзывы_в_главной + * li {
+        margin: 25px;
+        width: calc(100% - 50px);
+    }
+}
+@media (max-width: 1200px) {
+    .отзывы_в_главной + * {
+        display: block;
+        text-align: center;
+        padding: 0;
+    }
+}
