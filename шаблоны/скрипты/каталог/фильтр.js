@@ -100,7 +100,7 @@ if ($(x1 = '.панель_сортировки_и_фильтра ').length == 1)
     })
     цифровое_дерево = '[' + цифровое_дерево.toString () + ']'
   }
-  $('body').on('click', '.toggle,' + x1 + '.чекбоксы *', function () {
+  $('body').on('click', x1 + '.toggle,' + x1 + '.чекбоксы *', function () {
     $(this).toggleClass('a')
   })
   $('body').on('keyup', x1 + '.keyup', function (event) {

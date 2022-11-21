@@ -85,10 +85,12 @@ ul.панель_сортировки_и_фильтра {
 .панель_сортировки_и_фильтра .a svg:nth-child(2) {
   display: inherit;
 }
+.панель_сортировки_и_фильтра .a:first-child + div {
+  overflow: hidden;
+}
 .панель_сортировки_и_фильтра .a + div {
   display: block;
   position: relative;
-  overflow: hidden;
 }
 .панель_сортировки_и_фильтра .toggleText:nth-child(2) {
   justify-content: space-between;
