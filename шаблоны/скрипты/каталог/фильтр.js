@@ -165,7 +165,7 @@ if ($(x1 = '.панель_сортировки_и_фильтра ').length == 1)
         if (бренды == '') {
           $('.лента_каталога').html ('')
           $(x1 + 'button:eq(0) *:eq(0)').text (0)
-          history.pushState ('object or string', 'Title', домен + 'каталог.php?' + путь0)
+          history.pushState ('object or string', 'Title', домен + 'каталог.php?' + путь0 + '&страница=1')
           $(x1 + '.чекбоксы_категорий *').addClass ('a')
           return false
         }
@@ -236,7 +236,7 @@ if ($(x1 = '.панель_сортировки_и_фильтра ').length == 1)
             if (категории == '[]') {
               $('.лента_каталога').html ('')
               $(x1 + 'button:eq(0) *:eq(0)').text (0)
-              history.pushState ('object or string', 'Title', домен + 'каталог.php?' + путь0)
+              history.pushState ('object or string', 'Title', домен + 'каталог.php?' + путь0 + '&страница=1')
               $(x1 + '.чекбоксы_брендов *').addClass ('a')
               return false
             }
