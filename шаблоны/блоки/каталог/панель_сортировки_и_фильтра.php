@@ -47,7 +47,7 @@
       <?php
         if ($_GET['путь']) {
           echo '<p class="toggle">Бренд' . $svg0 . '</p>';
-          echo '<div class="чекбоксы чекбоксы_брендов">';
+          echo '<div class="чекбоксы бренды">';
             foreach (array_unique ($m0) as $v) echo '<span>' . $v . '</span>';
           echo '</div>';
         }
@@ -58,10 +58,10 @@
       </p>
       <div class="toggleText tT0">
         <?php
-          if ($k30 > 0) $k30m[] = 'Да';
-          if ($k30 != $k4) $k30m[] = 'Нет';
-          if (($k30 > 0) and ($k30 != $k4)) $k30m[] = 'Все';
-          echo '<p class="toggle">' . $k30m[count($k30m) - 1] . '</p>';
+          if ($k30 > 0) $k30m [] = 'Да';
+          if ($k30 != $k4) $k30m [] = 'Нет';
+          if (($k30 > 0) and ($k30 != $k4)) $k30m [] = 'Все';
+          echo '<p class="toggle">' . $k30m [count ($k30m) - 1] . '</p>';
           if (count($k30m) != 1) {
             echo '<p>';
               foreach ($k30m as $v) echo '<span>' . $v . '</span>';
@@ -90,7 +90,7 @@
         Дерево категорий
         <?php echo $svg0; ?>
       </p>
-      <div class="чекбоксы чекбоксы_категорий">
+      <div class="чекбоксы категории">
         <?php
           рекурсия_каталога_для_категорий ('../товары/', $глубина = '');
           вывод_категорий ($каталог_для_меню, $клас = 'категории_фильтра_каталога', $путь = $_GET['путь']);
