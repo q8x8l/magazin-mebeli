@@ -1,7 +1,5 @@
 // функция_ленты_каталога ()
 if ($('slick + *').length > 0) {
-  // На удаление
-    // лента.find ('script.товары').remove ()
   $('slick + *').slick({
     dots: false,
     infinite: true,
@@ -11,7 +9,7 @@ if ($('slick + *').length > 0) {
     variableWidth: true
   })
 }
-function функция_ленты_каталога () {
+function функция_ленты_каталога (сырая_лента_с_сервера) {
   sv0 = 'compare_'
   sv1 = 'favorite_'
   sv2 = 'add'
@@ -19,10 +17,10 @@ function функция_ленты_каталога () {
   svg = []
   svgm = [sv0 + sv2, sv0 + sv3, sv1 + sv2, sv1 + sv3]
   svgm.forEach ((e) => {svg.push ('<svg><use xlink:href="' + домен + '/стили/svg/sprite2.svg#icon_shop_' + e + '"></use></svg>')})
-  лента = $('.лента_каталога')
-  if (лента.length > 0) {
+  if ((лента = $('.лента_каталога')).length > 0) {
+    лента.html ('')
     for (index = 0; index < лента.length; index++) {
-      лента.eq (index).find ('script.товары:last-child()').text ().slice (1, -1).split ('^__^').forEach (элемент_ленты => {
+      сырая_лента_с_сервера.forEach (элемент_ленты => {
         if (элемент_ленты != '') {
           ячейка_элемента_ленты = элемент_ленты.split ('^_^')
           лента.eq (index).append (
@@ -65,8 +63,8 @@ function функция_ленты_каталога () {
           }
         }
       })
-      $('script.товары').eq (0).remove ()
     }
   }
+  разряд ()
   проверка_товаров_на_куки ()
 }
