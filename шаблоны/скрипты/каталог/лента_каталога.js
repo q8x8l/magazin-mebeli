@@ -18,7 +18,10 @@ function функция_ленты_каталога (сырая_лента_с_с
   svgm = [sv0 + sv2, sv0 + sv3, sv1 + sv2, sv1 + sv3]
   svgm.forEach ((e) => {svg.push ('<svg><use xlink:href="' + домен + '/стили/svg/sprite2.svg#icon_shop_' + e + '"></use></svg>')})
   if ((лента = $('.лента_каталога')).length > 0) {
-    лента.html ('')
+    if (дозагрузка != 1)
+      {
+        лента.html ('')
+      }
     for (index = 0; index < лента.length; index++) {
       сырая_лента_с_сервера.forEach (элемент_ленты => {
         if (элемент_ленты != '') {
