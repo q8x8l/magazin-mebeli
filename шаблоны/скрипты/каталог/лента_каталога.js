@@ -1,12 +1,12 @@
 // функция_ленты_каталога ()
 if ($('slick + *').length > 0) {
   $('slick + *').slick({
-    dots: false,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 1,
-    centerMode: true,
-    variableWidth: true
+    dots         : false,
+    infinite     : true,
+    speed        : 300,
+    slidesToShow : 1,
+    centerMode   : true,
+    variableWidth: true,
   })
 }
 function функция_ленты_каталога (сырая_лента_с_сервера) {
