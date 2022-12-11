@@ -13,6 +13,8 @@
   include          $h2 . 'панель_сортировки_и_фильтра.php';
   if ($h0) include $h2 . 'категории_для_бренда.php';
   echo                   '<ul class="лента_каталога"></ul>';
+  echo                   '<div class="паг"></div>';
+  echo                   '<link rel="stylesheet" href="' . $домен . 'стили/каталог/пагинация.css">';
   if ($r)  include $h2 . 'соседние_категории.php';
   include                'блоки/ноги.php';
 ?>
