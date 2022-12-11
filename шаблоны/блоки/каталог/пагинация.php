@@ -40,5 +40,4 @@
       echo '</p>';
     }
   echo '</div>';
-  echo '<link rel="stylesheet" href="' . $домен . '../../стили/каталог/пагинация.css">';
 ?>
