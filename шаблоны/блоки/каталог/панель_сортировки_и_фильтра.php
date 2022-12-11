@@ -48,7 +48,10 @@
         if ($_GET['путь']) {
           echo '<p class="toggle">Бренд' . $svg0 . '</p>';
           echo '<div class="чекбоксы бренды">';
-            foreach (array_unique ($m0) as $v) echo '<span>' . $v . '</span>';
+            foreach (array_unique ($m0) as $v)
+              {
+                echo '<span>' . $v . '</span>';
+              }
           echo '</div>';
         }
       ?>
