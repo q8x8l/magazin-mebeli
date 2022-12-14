@@ -50,17 +50,19 @@
       $m0 = [];
       sort ($каталог_для_меню);
       foreach ($каталог_для_меню as $key => $value) {
-        $папка = explode('/', $value);
-        $каталогk0c = count (explode('/', $value));
-        $каталогk1c = count (explode('/', $каталог_для_меню[$key + 1]));
-        if (
-          ($каталогk0c == $каталогk1c)
-            or
-          ($каталогk0c >  $каталогk1c)
-        ) {
-          unset ($папка[count($папка) - 1]);
-        }
-        $папка = implode('/', $папка);
+        $папка = explode ('/', $value);
+        $каталогk0c = count (explode ('/', $value));
+        $каталогk1c = count (explode ('/', $каталог_для_меню [$key + 1]));
+        if
+          (
+            ($каталогk0c == $каталогk1c)
+              or
+            ($каталогk0c >  $каталогk1c)
+          )
+            {
+              unset ($папка [count ($папка) - 1]);
+            }
+        $папка = implode ('/', $папка);
         if ($путь != '') if (!str_contains ($папка, $путь)) continue;
         $m0 [] = $папка;
       }
@@ -68,9 +70,8 @@
     //
     $mass = '';
     foreach ($m1 as $key => $value) {
-      $count_value = count (explode ('/', $value));
       $m1k0c  = count (explode ('/', $value));
-      $m1k1c  = count (explode ('/', $m1[$key + 1]));
+      $m1k1c  = count (explode ('/', $m1 [$key + 1]));
       $value0 = explode ('/', $value);
       $slice  = array_slice ($value0, -1)[0];
       array_pop ($value0);
@@ -90,8 +91,13 @@
           }
           break;
         case 'категории_фильтра_каталога':
-          if ($count_value == 1) continue;
-          echo '<span путь="' . $value . '/" style="margin-left: ' . (($count_value - 1) * 20 - 20) . 'px; ">' . $slice . '</span>';
+          if ($m1k0c == 1) continue;
+          // Разработка выпадения
+            $test_let_0 = 0;
+              if ($m1k0c <  $m1k1c) $test_let_0 = 1;
+                // Если  1 то добавим класс и соответственно плюсик
+                // Иначе 0 то добавим класс и соответственно минусик
+          echo '<span путь="' . $value . '/" style="margin-left: ' . (($m1k0c - 1) * 20 - 20) . 'px; ">' . '(' . $test_let_0 . '.' . ($m1k0c - 1) . ')' . ' ' . $slice . '</span>';
           break;
       }
     }
