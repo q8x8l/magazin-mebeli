@@ -100,6 +100,7 @@
               // В скобочка статус
                                   // 1ый индекс - дропдаун
                                   // 2ой индекс - уровень
+          // echo '<span путь="' . $value . '/" style="margin-left: ' . (($m1k0c - 1) * 20 - 20) . 'px; ">' . $slice . '</span>';
           echo '<span путь="' . $value . '/" style="margin-left: ' . (($m1k0c - 1) * 20 - 20) . 'px; ">' . '(' . $test_let_0 . '.' . ($m1k0c - 1) . ')' . ' ' . $slice . '</span>';
           break;
       }
