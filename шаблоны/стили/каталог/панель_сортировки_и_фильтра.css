@@ -110,7 +110,7 @@ ul.панель_сортировки_и_фильтра {
 .панель_сортировки_и_фильтра input:nth-child(2) {
   float: right;
 }
-.панель_сортировки_и_фильтра .чекбоксы span:before {
+.панель_сортировки_и_фильтра .чекбоксы p:before {
   content: "\e903";
   border: 1px solid #1e807f;
   background: #1e807f;
@@ -124,25 +124,25 @@ ul.панель_сортировки_и_фильтра {
   margin-right: 5px;
   border-radius: 3px;
 }
-.панель_сортировки_и_фильтра .чекбоксы span.a:before {
+.панель_сортировки_и_фильтра .чекбоксы p.a:before {
   content: '';
   border-.color: gray;
   background: none;
 }
-.панель_сортировки_и_фильтра .чекбоксы span {
+.панель_сортировки_и_фильтра .чекбоксы p {
   display: inline-flex;
   width: calc(50% - 10px);
   cursor: pointer;
   font-size: 14px;
   padding: 5px;
 }
-.панель_сортировки_и_фильтра .чекбоксы.категории span {
+.панель_сортировки_и_фильтра .чекбоксы.категории p {
   width: 100%;
 }
 .панель_сортировки_и_фильтра form div > p:nth-child(1),.панель_сортировки_и_фильтра form div p + p * {
   padding: 2px;
 }
-.панель_сортировки_и_фильтра form div > p {
+.панель_сортировки_и_фильтра form .toggleText > p {
   border: 1px solid gray;
   position: relative;
 }

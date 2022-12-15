@@ -50,7 +50,7 @@
           echo '<div class="чекбоксы бренды">';
             foreach (array_unique ($m0) as $v)
               {
-                echo '<span>' . $v . '</span>';
+                echo '<p><i>' . $v . '</i></p>';
               }
           echo '</div>';
         }
