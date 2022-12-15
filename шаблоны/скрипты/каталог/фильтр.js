@@ -333,4 +333,26 @@ if ($(панель = '.панель_сортировки_и_фильтра ').le
     history.pushState ('object or string', 'Title', домен + 'каталог.php?' + путь0 + '&страница=1');
     return false;
   })
+  // Выпадение подкатегорий
+    $('body').on ('click', панель + '.чекбоксы.категории p i:not(:last-child)', function () {
+      парент = $(this).parent ().toggleClass ('выпал');
+      метка  = парент.attr ('метка').split (', ');
+      путь = парент.attr ('путь');
+      $(панель + '.чекбоксы.категории p').each (function () {
+        if (путь == $(this).attr ('путь'))          return;
+        if (!$(this).attr ('путь').includes (путь)) return;
+        if (!парент.hasClass ('выпал'))
+          {
+            $(this).css ('display', 'none').removeClass ('выпал');
+          }
+        else
+          {
+            if ((парент.attr ('путь').split ('/').length + 1) == $(this).attr ('путь').split ('/').length)
+              {
+                $(this).css ('display', 'inline-flex');
+              }
+          }
+      });
+      return false;
+    });
 }

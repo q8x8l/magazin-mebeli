@@ -111,23 +111,23 @@ ul.панель_сортировки_и_фильтра {
   float: right;
 }
 .панель_сортировки_и_фильтра .чекбоксы p:before {
-  content: "\e903";
-  border: 1px solid #1e807f;
-  background: #1e807f;
-  font: 9px 'icomoon';
-  color: #fff;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 15px;
-  height: 15px;
-  margin-right: 5px;
-  border-radius: 3px;
+  content         : "\e903";
+  border          : 1px solid #1e807f;
+  background      : #1e807f;
+  font            : 9px 'icomoon';
+  color           : #fff;
+  display         : inline-flex;
+  justify-content : center;
+  align-items     : center;
+  width           : 15px;
+  height          : 15px;
+  margin-right    : 5px;
+  border-radius   : 3px;
 }
 .панель_сортировки_и_фильтра .чекбоксы p.a:before {
-  content: '';
+  content      : '';
   border-.color: gray;
-  background: none;
+  background   : none;
 }
 .панель_сортировки_и_фильтра .чекбоксы p {
   display: inline-flex;
@@ -139,9 +139,36 @@ ul.панель_сортировки_и_фильтра {
 .панель_сортировки_и_фильтра .чекбоксы.категории p {
   width: 100%;
 }
-.панель_сортировки_и_фильтра form div > p:nth-child(1),.панель_сортировки_и_фильтра form div p + p * {
-  padding: 2px;
+.панель_сортировки_и_фильтра .чекбоксы.категории p i:not(:last-child) {
+  border: 1px solid;
+  margin-right: 5px;
 }
+.панель_сортировки_и_фильтра .чекбоксы.категории p i:not(:last-child):nth-child(1),
+.панель_сортировки_и_фильтра .чекбоксы.категории p.выпал i:not(:last-child):nth-child(2)
+  {
+    display: inline-flex;
+    padding: 0 4px;
+  }
+.панель_сортировки_и_фильтра .чекбоксы.категории p i:nth-child(2),
+.панель_сортировки_и_фильтра .чекбоксы.категории p.выпал i:not(:last-child):nth-child(1)
+  {
+    display: none;
+    padding: 0 6px !important;
+  }
+.панель_сортировки_и_фильтра form div.toggleText > p:nth-child(1),
+.панель_сортировки_и_фильтра form div.toggleText p + p *
+  {
+    padding: 2px;
+  }
+.панель_сортировки_и_фильтра .чекбоксы.категории p
+  {
+    display: none;
+  }
+.панель_сортировки_и_фильтра .чекбоксы.категории p[метка*="1, "],
+.панель_сортировки_и_фильтра .чекбоксы.категории p[метка="1"]
+  {
+    display: inline-flex;
+  }
 .панель_сортировки_и_фильтра form .toggleText > p {
   border: 1px solid gray;
   position: relative;
