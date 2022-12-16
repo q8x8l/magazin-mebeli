@@ -371,7 +371,7 @@ if ($(панель = '.панель_сортировки_и_фильтра ').le
           }
         else if ((парент . attr ('путь') . split ('/').length + 1) == $ (this) . attr ('путь') . split ('/') . length)
           {
-            $ (this) . css ('display', 'inline-flex');
+            $ (this) . css ('display', 'block');
           }
       });
       return false;
