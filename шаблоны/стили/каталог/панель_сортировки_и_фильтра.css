@@ -93,16 +93,16 @@ ul.панель_сортировки_и_фильтра {
   position: relative;
 }
 .панель_сортировки_и_фильтра .toggleText:nth-child(2) {
-  justify-content: space-between;
-  margin: 10px;
+  justify-content : space-between;
+  margin          : 10px;
 }
 .панель_сортировки_и_фильтра input {
-  width: calc(50% - 5px);
-  padding: 5px;
-  font-size: 16px;
-  color: gray;
-  border: 1px solid;
-  border-radius: 5px;
+  width         : calc(50% - 5px);
+  padding       : 5px;
+  font-size     : 16px;
+  color         : gray;
+  border        : 1px solid;
+  border-radius : 5px;
 }
 .панель_сортировки_и_фильтра input:nth-child(1) {
   float: left;
@@ -125,19 +125,16 @@ ul.панель_сортировки_и_фильтра {
   border-radius   : 3px;
 }
 .панель_сортировки_и_фильтра .чекбоксы p.a:before {
-  content      : '';
-  border-.color: gray;
-  background   : none;
+  content       : '';
+  border-.color : gray;
+  background    : none;
 }
 .панель_сортировки_и_фильтра .чекбоксы p {
-  display: inline-flex;
-  width: calc(50% - 10px);
-  cursor: pointer;
-  font-size: 14px;
-  padding: 5px;
-}
-.панель_сортировки_и_фильтра .чекбоксы.категории p {
-  width: 100%;
+  display   : inline-flex;
+  width     : calc(50% - 10px);
+  cursor    : pointer;
+  font-size : 14px;
+  padding   : 5px 0;
 }
 .панель_сортировки_и_фильтра .чекбоксы.категории p i:not(:last-child) {
   border: 1px solid;
@@ -146,8 +143,8 @@ ul.панель_сортировки_и_фильтра {
 .панель_сортировки_и_фильтра .чекбоксы.категории p i:not(:last-child):nth-child(1)
   {
     display         : inline-flex;
-    width           : 18px       ;
-    justify-content : center     ;
+    width           : 18px;
+    justify-content : center;
   }
 .панель_сортировки_и_фильтра form div.toggleText > p:nth-child(1),
 .панель_сортировки_и_фильтра form div.toggleText p + p *

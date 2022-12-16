@@ -336,11 +336,16 @@ if ($(панель = '.панель_сортировки_и_фильтра ').le
     return false;
   })
   // Выпадение подкатегорий
-    $ (панель + '.чекбоксы.категории p').each (function () {
-      if ($ (this) . attr ('метка').split (', ') . length == 2)
+    $ (панель + '.чекбоксы.категории p') . each (function () {
+      if ($ (this) . attr ('метка') . split (', ') . length == 2)
         {
           $ (this) . prepend ('<i>+</i>');
         }
+      console.log ();
+      $ (this) . css ({
+        'margin-left' : (($ (this) . attr ('путь') . split ('/') . length - 2) * 20 - 20) + 'px',
+        'width'       : 'calc(100% - ' + (($ (this) . attr ('путь') . split ('/') . length - 2) * 20 - 20) + 'px)',
+      });
     });
     $ ('body').on ('click', панель + '.чекбоксы.категории p i:not(:last-child)', function () {
       парент = $ (this).parent ().toggleClass ('выпал');
