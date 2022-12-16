@@ -143,17 +143,11 @@ ul.панель_сортировки_и_фильтра {
   border: 1px solid;
   margin-right: 5px;
 }
-.панель_сортировки_и_фильтра .чекбоксы.категории p i:not(:last-child):nth-child(1),
-.панель_сортировки_и_фильтра .чекбоксы.категории p.выпал i:not(:last-child):nth-child(2)
+.панель_сортировки_и_фильтра .чекбоксы.категории p i:not(:last-child):nth-child(1)
   {
-    display: inline-flex;
-    padding: 0 4px;
-  }
-.панель_сортировки_и_фильтра .чекбоксы.категории p i:nth-child(2),
-.панель_сортировки_и_фильтра .чекбоксы.категории p.выпал i:not(:last-child):nth-child(1)
-  {
-    display: none;
-    padding: 0 6px !important;
+    display         : inline-flex;
+    width           : 18px       ;
+    justify-content : center     ;
   }
 .панель_сортировки_и_фильтра form div.toggleText > p:nth-child(1),
 .панель_сортировки_и_фильтра form div.toggleText p + p *
