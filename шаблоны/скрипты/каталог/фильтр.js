@@ -328,9 +328,12 @@ if ($(панель = '.панель_сортировки_и_фильтра ').le
     p1 = $(панель + '.tT1 *');
     p1.eq (0).text(p1.last ().text ());
     $(панель + '.чекбоксы > *').each (function () {$(this).attr ('class', '')});
-      $(панель + '.чекбоксы.категории p').css ('display', 'none');
-      $(панель + '.чекбоксы.категории p[метка*="1, "],' + панель + '.чекбоксы.категории p[метка="1"]').css ('display', 'inline-flex');
-    $(панель + 'button:eq(0)').children().eq(0).text($(панель + 'button:eq(0)').children ().eq (1).text ());
+      $ (панель + '.чекбоксы.категории p').css ('display', 'none');
+      $ (панель + '.чекбоксы.категории p[метка*="1, "],' + панель + '.чекбоксы.категории p[метка="1"]').css ('display', 'inline-flex');
+    $ (панель + '.чекбоксы.категории p') . each (function () {
+      if ($ (this) . attr ('метка') . split (', ') . length == 2) $ (this) . find(':first-child') . text ('+');
+    });
+    $ (панель + 'button:eq(0)').children().eq(0).text($(панель + 'button:eq(0)').children ().eq (1).text ());
     запрос_фильтра (9, 1);
     history.pushState ('object or string', 'Title', домен + 'каталог.php?' + путь0 + '&страница=1');
     return false;
@@ -341,10 +344,10 @@ if ($(панель = '.панель_сортировки_и_фильтра ').le
         {
           $ (this) . prepend ('<i>+</i>');
         }
-      console.log ();
+      длина = ($ (this) . attr ('путь') . split ('/') . length - 2) * 20 - 20 + 'px';
       $ (this) . css ({
-        'margin-left' : (($ (this) . attr ('путь') . split ('/') . length - 2) * 20 - 20) + 'px',
-        'width'       : 'calc(100% - ' + (($ (this) . attr ('путь') . split ('/') . length - 2) * 20 - 20) + 'px)',
+        'margin-left' : длина,
+        'width'       : 'calc(100% - ' + длина + ')',
       });
     });
     $ ('body').on ('click', панель + '.чекбоксы.категории p i:not(:last-child)', function () {
@@ -353,22 +356,22 @@ if ($(панель = '.панель_сортировки_и_фильтра ').le
       путь  = парент.attr ('путь');
       if (!парент.hasClass ('выпал'))
         {
-          $(this).text ('+');
+          $ (this) . text ('+');
         }
       else
         {
-          $(this).text ('-');
+          $ (this) . text ('-');
         }
       $(панель + '.чекбоксы.категории p').each (function () {
         if (путь == $(this).attr ('путь'))          return;
         if (!$(this).attr ('путь').includes (путь)) return;
         if (!парент.hasClass ('выпал'))
           {
-            $(this).css ('display', 'none').removeClass ('выпал');
+            $ (this) . css ('display', 'none');
           }
-        else if ((парент.attr ('путь').split ('/').length + 1) == $(this).attr ('путь').split ('/').length)
+        else if ((парент . attr ('путь') . split ('/').length + 1) == $ (this) . attr ('путь') . split ('/') . length)
           {
-            $(this).css ('display', 'inline-flex');
+            $ (this) . css ('display', 'inline-flex');
           }
       });
       return false;
