@@ -62,15 +62,12 @@
       </p>
       <div class="toggleText tT0">
         <?php
-          if ($k30 > 0)    $k30m [] = 'Да';
-          if ($k30 != $k4) $k30m [] = 'Нет';
-          if (($k30 > 0) and ($k30 != $k4)) $k30m [] = 'Все';
-          echo '<p class="toggle">' . $k30m [count ($k30m) - 1] . '</p>';
-          if (count($k30m) != 1) {
-            echo '<p>';
-              foreach ($k30m as $v) echo '<span>' . $v . '</span>';
-            echo '</p>';
-          }
+          echo '<p class="toggle">Все</p>';
+          echo '<p>';
+            echo '<span>Нет</span>';
+            echo '<span>Да</span>';
+            echo '<span>Все</span>';
+          echo '</p>';
         ?>
       </div>
       <p class="toggle">
@@ -79,15 +76,12 @@
       </p>
       <div class="toggleText tT1">
         <?php
-          if ($k31 > 0) $k31m[] = 'Да';
-          if ($k31 != $k4) $k31m[] = 'Нет';
-          if (($k31 > 0) and ($k31 != $k4)) $k31m[] = 'Все';
-          echo '<p class="toggle">' . $k31m[count($k31m) - 1] . '</p>';
-          if (count($k31m) != 1) {
-            echo '<p>';
-              foreach ($k31m as $v) echo '<span>' . $v . '</span>';
-            echo '</p>';
-          }
+          echo '<p class="toggle">Все</p>';
+          echo '<p>';
+            echo '<span>Нет</span>';
+            echo '<span>Да</span>';
+            echo '<span>Все</span>';
+          echo '</p>';
         ?>
       </div>
       <p class="toggle">
