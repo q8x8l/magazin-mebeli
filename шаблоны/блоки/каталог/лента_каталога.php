@@ -105,9 +105,13 @@
   echo PHP_EOL;
   print_r ($_GET ['экс_бренды']);
   echo PHP_EOL;
-  echo 'Ушло';
+  echo 'Запланированно на уход';
   echo PHP_EOL;
-  print_r (array_values (array_unique ($массив_брендов_в_выброс)));
+  foreach ($_GET ['экс_бренды'] as $value) {
+    echo $value . ' : ' . array_values (array_unique ($массив_брендов_в_выброс)) [$value] . PHP_EOL;
+  }
+  echo PHP_EOL;
+  print_r ($массив_для_внутреннего_запроса);
   echo ';;';
   // Обнуление ответа запроса каталога
     $каталог = '';
