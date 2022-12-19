@@ -1,6 +1,6 @@
 <?php
-  $m = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['SERVER_NAME'] . urldecode($_SERVER['REQUEST_URI']);
-  foreach ($m = explode ('/', explode('?', $m)[0]) as $k => $v) if ($k != count($m) - 1) $домен .= $v . '/';
+  $m = $_SERVER ['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . urldecode ($_SERVER['REQUEST_URI']);
+  foreach ($m = explode ('/', explode('?', $m)[0]) as $k => $v) if ($k != count ($m) - 1) $домен .= $v . '/';
 
   foreach ($m as $k => $v) if ($v == 'шаблоны') $тайтл = trim ($m [$k + 1], '.php');
   foreach (explode (PHP_EOL, file_get_contents ('тайтлы')) as $v) if (($r = explode (':', $v))[0] == $тайтл) $тайтл = $r[1];
