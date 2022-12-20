@@ -9,7 +9,7 @@ function поставим_блок_пагинации (количество_эл
   })
 }
 $('body').on ('click', '.Пагинация .p1', function () {
-  щет (0, aa = 1);
+  // щет (0, aa = 1);
   url = new URLSearchParams (window.location.search);
   путь       = url.get ('путь');
   Страница   = url.get ('страница');
