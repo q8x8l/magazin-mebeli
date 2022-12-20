@@ -114,6 +114,9 @@
   .товар_недели .p5 {
     margin-top: 15px;
   }
+  .лента_каталога li {
+    width: calc(50% - 40px);
+  }
 }
 @media (max-width: 700px) {
   .товар_недели {
@@ -134,6 +137,17 @@
     text-align: center;
   }
 }
+@media (max-width: 600px) {
+  .лента_каталога li {
+    width: calc(100% - 40px);
+  }
+  .лента_каталога {
+    justify-content: center;
+  }
+  .лента_каталога li > a:first-child {
+    text-align: left;
+  }
+}
 @media (max-width: 500px) {
   header .блок_1 {
     padding: 0 20px;
@@ -143,7 +157,6 @@
   }
   .лента_каталога > button,.верхний_слайдер_главной .slider__control {
     display: none !important;
-
   }
   .Пагинация .p1 :nth-child(1) {
     display: none;
