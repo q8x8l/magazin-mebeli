@@ -11,17 +11,20 @@
   max-width: var(--max-width);
   margin: auto;
 }
-.лента_каталога li {
-  margin: 20px;
-  position: relative;
-  max-width: 440px;
-  width: calc(25% - 40px);
-}
-.сдвиг_картинки * {
-  max-width: 100%;
-  position: absolute;
-  top: 50%;
-}
+.лента_каталога li
+  {
+    margin:    20px;
+    position:  relative;
+    max-width: 440px;
+    width:     calc(25% - 40px);
+    /* opacity:   0; */
+  }
+.сдвиг_картинки *
+  {
+    max-width: 100%;
+    position:  absolute;
+    top:       50%;
+  }
 .сдвиг_картинки {
   position: relative;
   display: block;
