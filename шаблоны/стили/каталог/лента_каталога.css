@@ -13,11 +13,11 @@
 }
 .лента_каталога li
   {
+    opacity:   0;
     margin:    20px;
-    position:  relative;
     max-width: 440px;
+    position:  relative;
     width:     calc(25% - 40px);
-    /* opacity:   0; */
   }
 .сдвиг_картинки *
   {
