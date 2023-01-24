@@ -127,7 +127,7 @@ header .блок_1 .d1 p:hover span {
 }
 header .блок_2 {
   max-width: var(--max-width);
-  padding: 20px 60px;
+  padding: 20px 0;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -199,16 +199,18 @@ header .блок_2 .звонки p {
 .окно_1 .кнопка_обратный_звонок:hover {
   color: #000;
 }
-header .блок_3 {
-  padding: 0 60px;
-  background: #cab69d;
-}
-header .блок_3 > * {
-  max-width: var(--max-width);
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-}
+header .блок_3
+  {
+    padding: 0 20px;
+    background: #cab69d;
+  }
+header .блок_3 > *
+  {
+    max-width: var(--max-width);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
 header .меню {
   margin-left: -10px;
 }
@@ -258,7 +260,7 @@ header .блок_3 .кнопка svg {
 header .блок_3 .кнопка {
   font-size: 16px;
   color: #49433c;
-  margin: 10px;
+  margin: 10px 0 10px 10px;
   border: 1px solid #a59581;
   border-radius: 5px;
   line-height: 40px;

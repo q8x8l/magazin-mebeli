@@ -83,3 +83,11 @@ $('body').on('click', '.маленькие_картинки img', function () {
   q.addClass('a')
   q.parent().prev().children().attr('src', $(this).attr('src'))
 })
+
+console.log
+  (
+    `
+      - проапать отображение товара;
+      - клавиша Esc закрывает окно всплывающее;
+    `
+  );
