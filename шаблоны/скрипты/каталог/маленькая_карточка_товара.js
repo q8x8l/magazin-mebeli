@@ -1,14 +1,34 @@
 $('body').on('click', '.лента_каталога .кнопка_показать_окно', function() {
-    q = $(this).parent()
-    q.addClass('выделенный_товар')
-    w = $('.окно_3 > div')
-    p0 = w.find('p').eq(0)
-    p1 = w.find('p').eq(1)
-    if (q.prev().attr('путь')) {p0.css('display', 'block')} else {p0.css('display', 'none')}
-    if (q.next().attr('путь')) {p1.css('display', 'block')} else {p1.css('display', 'none')}
-    аякс_на_привью_товара_в_каталоге (q.attr('путь'))
-    if (q.index() == $('.лента_каталога > *').length - 1) {p1.css('display', 'none')}
-    if (q.index() == 0) {p0.css('display', 'none')}
+    q = $(this).parent ();
+    q.addClass ('выделенный_товар');
+    w = $('.окно_3 > div');
+    p0 = w.find ('p').eq (0);
+    p1 = w.find ('p').eq (1);
+    if (q.prev ().attr ('путь'))
+      {
+        p0.css ('display', 'block');
+      }
+    else
+      {
+        p0.css ('display', 'none');
+      }
+    if (q.next ().attr ('путь'))
+      {
+        p1.css ('display', 'block');
+      }
+    else
+      {
+        p1.css ('display', 'none');
+      }
+    аякс_на_привью_товара_в_каталоге (q.attr('путь'));
+    if (q.index () == $('.лента_каталога > *').length - 1)
+      {
+        p1.css('display', 'none');
+      }
+    if (q.index () == 0)
+      {
+        p0.css('display', 'none');
+      }
 })
 $('body').on('click', '.щет_и_кнопка_корзины [type=button]', function() {
   q = $(this)
@@ -44,21 +64,23 @@ function аякс_на_привью_товара_в_каталоге (путь) 
   })
 }
 z = 'выделенный_товар'
-$('body').on('click', '.окно_3 .лево,.окно_3 .право', function () {
-  e = $(this)
-  q = $('.' + z).removeClass(z)
-  if (e.hasClass('лево')) {
-    q = q.prev('li').addClass(z)
-    if (q.index() == 0) {e.css('display', 'none')}
-    e.next().css('display', 'block')
-  } else {
-    q = q.next().addClass(z)
-    if (q.index() == q.parent().children().length - 1) {e.css('display', 'none')}
-    e.prev().css('display', 'block')
+$('body').on ('click', '.окно_3 .лево,.окно_3 .право', function ()
+  {
+    e = $(this)
+    q = $('.' + z).removeClass(z)
+    if (e.hasClass('лево')) {
+      q = q.prev('li').addClass(z)
+      if (q.index() == 0) {e.css('display', 'none')}
+      e.next().css('display', 'block')
+    } else {
+      q = q.next().addClass(z)
+      if (q.index() == q.parent().children().length - 1) {e.css('display', 'none')}
+      e.prev().css('display', 'block')
+    }
+    аякс_на_привью_товара_в_каталоге (q.attr('путь'))
   }
-  аякс_на_привью_товара_в_каталоге (q.attr('путь'))
-})
-$('body').on('click', '.маленькие_картинки > :eq(0),.маленькие_картинки > :last-child', function() {
+)
+$('body').on ('click', '.маленькие_картинки > :eq(0),.маленькие_картинки > :last-child', function () {
   q = $(this).parent()
   w = q.find('.видимый')
   if ($(this).index() == 0) {
@@ -78,12 +100,17 @@ $('body').on('click', '.маленькие_картинки > :eq(0),.мален
     y.last().attr('дизаблед', u)
   }
 })
-$('body').on('click', '.маленькие_картинки img', function () {
-  (q = $(this).parent()).parent().find('li').each(function(){$(this).removeClass('a')})
-  q.addClass('a')
-  q.parent().prev().children().attr('src', $(this).attr('src'))
-})
-
+$('body').on ('click', '.маленькие_картинки img', function ()
+  {
+    (q = $(this).parent()).parent().find('li').each(function()
+      {
+        $(this).removeClass('a')
+      }
+    );
+    q.addClass ('a')
+    q.parent ().prev ().children ().attr ('src', $(this).attr('src'));
+  }
+);
 console.log
   (
     `
