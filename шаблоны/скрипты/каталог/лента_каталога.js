@@ -1,15 +1,14 @@
 if ($('slick + *').length > 0) {
   $('slick + *').slick ({
     dots          : false,
-    infinite      : true ,
-    speed         : 300  ,
-    slidesToShow  : 1    ,
-    centerMode    : true ,
-    variableWidth : true ,
+    infinite      : true,
+    speed         : 300,
+    slidesToShow  : 1,
+    centerMode    : true,
+    variableWidth : true,
   })
 }
 function аякс_в_ленту_каталога (страница = 1) {
-  console.log (фильтр_в_запрос);
   $.get (домен + локальный_путь_к_файлу + 'лента_каталога.php', {
     путь      : url.get ('путь'),
     страница  : url.get ('страница'),
