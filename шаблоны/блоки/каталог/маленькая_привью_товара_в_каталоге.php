@@ -1,9 +1,9 @@
 <?php
-  $w = $_GET['путь'];
-  $w0 = explode('/', $w);
+  $w = $_GET ['путь'];
+  $w0 = explode ('/', $w);
   $r0 = '../../../';
   include $r0 . 'функции.php';
-  $r1 = 'товары' . $w;
+  $r1 = 'товары/' . $w;
   $r = $r0 . $r1 . '/*';
   $f = explode (PHP_EOL, file_get_contents ($r0 . $r1 . '/атрибуты'));
   echo '<p class="p1">' . explode (':', $f[6])[1] . '</p>';

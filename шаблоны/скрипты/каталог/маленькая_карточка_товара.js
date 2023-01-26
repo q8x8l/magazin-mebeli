@@ -1,35 +1,35 @@
 $('body').on('click', '.лента_каталога .кнопка_показать_окно', function ()
   {
-      q = $(this).parent ();
-      q.addClass ('выделенный_товар');
-      w = $('.окно_3 > div');
-      p0 = w.find ('p').eq (0);
-      p1 = w.find ('p').eq (1);
-      if (q.prev ().attr ('путь'))
-        {
-          p0.css ('display', 'block');
-        }
-      else
-        {
-          p0.css ('display', 'none');
-        }
-      if (q.next ().attr ('путь'))
-        {
-          p1.css ('display', 'block');
-        }
-      else
-        {
-          p1.css ('display', 'none');
-        }
-      аякс_на_привью_товара_в_каталоге (q.attr('путь'));
-      if (q.index () == $('.лента_каталога > *').length - 1)
-        {
-          p1.css('display', 'none');
-        }
-      if (q.index () == 0)
-        {
-          p0.css('display', 'none');
-        }
+    q = $(this).parent ();
+    q.addClass ('выделенный_товар');
+    w = $('.окно_3 > div');
+    p0 = w.find ('p').eq (0);
+    p1 = w.find ('p').eq (1);
+    if (q.prev ().attr ('путь'))
+      {
+        p0.css ('display', 'block');
+      }
+    else
+      {
+        p0.css ('display', 'none');
+      }
+    if (q.next ().attr ('путь'))
+      {
+        p1.css ('display', 'block');
+      }
+    else
+      {
+        p1.css ('display', 'none');
+      }
+    аякс_на_привью_товара_в_каталоге (q.attr ('путь'));
+    if (q.index () == $('.лента_каталога > *').length - 1)
+      {
+        p1.css('display', 'none');
+      }
+    if (q.index () == 0)
+      {
+        p0.css('display', 'none');
+      }
   }
 );
 $('body').on('click', '.щет_и_кнопка_корзины [type=button]', function ()
@@ -47,12 +47,16 @@ $('body').on('click', '.щет_и_кнопка_корзины [type=button]', fu
     }
   }
 );
-$('body').on('click', '.квадраты_цвета a', function () {аякс_на_привью_товара_в_каталоге ($(this).attr('путь'))})
+$('body').on ('click', '.квадраты_цвета a', function ()
+  {
+    аякс_на_привью_товара_в_каталоге ($(this).attr ('путь'));
+  }
+);
 function аякс_на_привью_товара_в_каталоге (путь) {
-  $.get(домен + 'блоки/каталог/маленькая_привью_товара_в_каталоге.php', {
+  $.get (домен + 'блоки/каталог/маленькая_привью_товара_в_каталоге.php', {
     путь: путь
-  }, (D) => {
-    $('.окно_3 > div > div').html(D)
+  }, (трафик) => {
+    $('.окно_3 > div > div').html (трафик);
     проверка_товара_на_куки (путь)
     о = $('.окно_3')
     щ = о.find('.цена_новая')
@@ -61,9 +65,9 @@ function аякс_на_привью_товара_в_каталоге (путь) 
     if ((с = о.find('.скидка')).length > 0) {
       с = +с.text().slice(1, -1)
       к = г / 100 * с
-      щ.after('<p class="цена_старая"><span class="разряд">' + г + '</span> р.</p>')
+      щ.after('<p class="цена_старая"><span class="разряд">' + г + '</span> р.</p>');
     }
-    щ.find('*').text(г - к)
+    щ.find('*').text (г - к);
     разряд ()
   })
 }
@@ -119,7 +123,6 @@ console.log
   (
     `
     файл (маленькая_карточка_товара.js)
-      - проапать отображение товара;
       - клавиша Esc закрывает окно всплывающее;
     `
   );
