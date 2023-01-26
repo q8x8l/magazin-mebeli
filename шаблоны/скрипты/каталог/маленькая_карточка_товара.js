@@ -1,48 +1,52 @@
-$('body').on('click', '.лента_каталога .кнопка_показать_окно', function() {
-    q = $(this).parent ();
-    q.addClass ('выделенный_товар');
-    w = $('.окно_3 > div');
-    p0 = w.find ('p').eq (0);
-    p1 = w.find ('p').eq (1);
-    if (q.prev ().attr ('путь'))
-      {
-        p0.css ('display', 'block');
-      }
-    else
-      {
-        p0.css ('display', 'none');
-      }
-    if (q.next ().attr ('путь'))
-      {
-        p1.css ('display', 'block');
-      }
-    else
-      {
-        p1.css ('display', 'none');
-      }
-    аякс_на_привью_товара_в_каталоге (q.attr('путь'));
-    if (q.index () == $('.лента_каталога > *').length - 1)
-      {
-        p1.css('display', 'none');
-      }
-    if (q.index () == 0)
-      {
-        p0.css('display', 'none');
-      }
-})
-$('body').on('click', '.щет_и_кнопка_корзины [type=button]', function() {
-  q = $(this)
-  if (q.index() == 0) {
-    w = q.next().attr('value')
-    if (--w != 0) q.next().attr('value', w)
-    if (w == 1) q.attr('дизаблед', 1)
+$('body').on('click', '.лента_каталога .кнопка_показать_окно', function ()
+  {
+      q = $(this).parent ();
+      q.addClass ('выделенный_товар');
+      w = $('.окно_3 > div');
+      p0 = w.find ('p').eq (0);
+      p1 = w.find ('p').eq (1);
+      if (q.prev ().attr ('путь'))
+        {
+          p0.css ('display', 'block');
+        }
+      else
+        {
+          p0.css ('display', 'none');
+        }
+      if (q.next ().attr ('путь'))
+        {
+          p1.css ('display', 'block');
+        }
+      else
+        {
+          p1.css ('display', 'none');
+        }
+      аякс_на_привью_товара_в_каталоге (q.attr('путь'));
+      if (q.index () == $('.лента_каталога > *').length - 1)
+        {
+          p1.css('display', 'none');
+        }
+      if (q.index () == 0)
+        {
+          p0.css('display', 'none');
+        }
   }
-  if (q.index() == 2) {
-    q.prev().prev().attr('дизаблед', 0)
-    w = q.prev().attr('value')
-    q.prev().attr('value', ++w)
+);
+$('body').on('click', '.щет_и_кнопка_корзины [type=button]', function ()
+  {
+    q = $(this)
+    if (q.index() == 0) {
+      w = q.next().attr('value')
+      if (--w != 0) q.next().attr('value', w)
+      if (w == 1) q.attr('дизаблед', 1)
+    }
+    if (q.index() == 2) {
+      q.prev().prev().attr('дизаблед', 0)
+      w = q.prev().attr('value')
+      q.prev().attr('value', ++w)
+    }
   }
-})
+);
 $('body').on('click', '.квадраты_цвета a', function () {аякс_на_привью_товара_в_каталоге ($(this).attr('путь'))})
 function аякс_на_привью_товара_в_каталоге (путь) {
   $.get(домен + 'блоки/каталог/маленькая_привью_товара_в_каталоге.php', {
