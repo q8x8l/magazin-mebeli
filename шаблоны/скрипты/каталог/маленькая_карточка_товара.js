@@ -110,13 +110,13 @@ $('body').on ('click', '.маленькие_картинки > :eq(0),.мале�
 })
 $('body').on ('click', '.маленькие_картинки img', function ()
   {
-    (q = $(this).parent()).parent().find('li').each(function()
+    (q = $(this).parent()).parent().find('li').each(function ()
       {
-        $(this).removeClass('a')
+        $(this).removeClass('a');
       }
     );
-    q.addClass ('a')
-    q.parent ().prev ().children ().attr ('src', $(this).attr('src'));
+    q.addClass ('a');
+    q.parent ().prev ().children ().attr ('src', $(this).attr ('src'));
   }
 );
 console.log
