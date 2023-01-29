@@ -136,11 +136,20 @@ ul.панель_сортировки_и_фильтра {
     background    : none;
     float         : left;
   }
-.панель_сортировки_и_фильтра .чекбоксы img {
-  margin: 0 10px 0 0;
-  height: 15px;
-  width:  15px;
-}
+.панель_сортировки_и_фильтра .чекбоксы img
+  {
+    margin: 0 10px 0 0;
+    height: 15px;
+    width:  15px;
+  }
+.панель_сортировки_и_фильтра .чекбоксы img:after
+  {
+    content    : "";
+    display    : block;
+    height     : 10px;
+    width      : 10px;
+    background : #fff;
+  }
 .панель_сортировки_и_фильтра .чекбоксы > *
   {
     cursor     : pointer;
