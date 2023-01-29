@@ -50,8 +50,7 @@
           echo '<div class="чекбоксы бренды">';
             foreach (array_values (array_unique ($m0)) as $key => $v)
               {
-                // echo '<p><a href="' . $домен . 'каталог.php?бренд=' . $v . '">' . $v . '</a></p>';
-                echo '<p индекс="' . $key . '">' . $v . '</p>';
+                echo '<p индекс="' . $key . '"><img src="' . $домен . '../бренды/' . $v . '" />' . $v . '</p>';
               }
           echo '</div>';
         }
