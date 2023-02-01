@@ -40,5 +40,8 @@
         })
       }
     })
+    $('body').on ('click', панель + '.toggle,' + панель + '.чекбоксы > *', function () {
+      $(this).toggleClass ('a');
+    })
   })
 </script>
