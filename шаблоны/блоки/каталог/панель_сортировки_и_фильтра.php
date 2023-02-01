@@ -50,7 +50,8 @@
           echo '<div class="чекбоксы бренды">';
             foreach (array_values (array_unique ($m0)) as $key => $v)
               {
-                echo '<p индекс="' . $key . '"><img src="' . $домен . '../бренды/' . $v . '" alt=" " />' . $v . '</p>';
+                // echo '<p индекс="' . $key . '"><img src="' . $домен . '../бренды/' . $v . '" alt=" " />' . $v . '</p>';
+                echo '<p индекс="' . $key . '"><i>v</i><img src="' . $домен . '../бренды/' . $v . '" alt=" " /><a href="">' . $v . '</a></p>';
               }
           echo '</div>';
         }
@@ -120,20 +121,21 @@
     </form>
     <span>
       <?php
-        switch ($q0 = $_GET['сортировка']) {
-          case 'Цена - убывание':
-            echo $svg1;
-            break;
-          case 'Цена - возрастание':
-            echo $svg2;
-            break;
-          case 'Название - Я-А':
-            echo $svg1;
-            break;
-          case 'Название - А-Я':
-            echo $svg2;
-            break;
-        }
+        switch ($q0 = $_GET['сортировка'])
+          {
+            case 'Цена - убывание':
+              echo $svg1;
+              break;
+            case 'Цена - возрастание':
+              echo $svg2;
+              break;
+            case 'Название - Я-А':
+              echo $svg1;
+              break;
+            case 'Название - А-Я':
+              echo $svg2;
+              break;
+          }
         echo $q0;
       ?>
     </span>
