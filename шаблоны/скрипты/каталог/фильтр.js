@@ -125,12 +125,14 @@ if ($(панель = '.панель_сортировки_и_фильтра ').le
       флаги = [];
       $(панель + '.toggleText').each (function (index) {
         полоска = $(this);
-        полоска.find ('p').eq (1).find ('span').each (function () {
-          if ($(this).text () == полоска.find ('p').eq (0).text ()) флаги.push ($(this).index ());
-        });
+        полоска.find ('p').eq (1).find ('span').each (function ()
+          {
+            if ($(this).text () == полоска.find ('p').eq (0).text ()) флаги.push ($(this).index ());
+          }
+        );
       });
-      inp0   =  $(панель + '.keyup').eq (0);
-      inp1   =  $(панель + '.keyup').eq (1);
+      inp0 = $(панель + '.keyup').eq (0);
+      inp1 = $(панель + '.keyup').eq (1);
         if ((iv0 = inp0.val ()) == '') {inp0v = inp0.attr ('placeholder').substring (4)} else {inp0v = iv0};
         if ((iv1 = inp1.val ()) == '') {inp1v = inp1.attr ('placeholder').substring (4)} else {inp1v = iv1};
       вилка_цен = [inp0v, inp1v];
@@ -152,10 +154,12 @@ if ($(панель = '.панель_сортировки_и_фильтра ').le
           сортировка = '';
         }
     // Все параметры в запросе
-    console.log (фильтр_в_запрос);
+    console.log (массив ['категории']);
+    return false;
     $.get (домен + локальный_путь_к_файлу + 'фильтр/динамика.php', {
       индекс_фильтра  : индекс_фильтра,
       бренды          : массив ['бренды'],
+      категории       : массив ['категории'],
       флаги           : флаги,
       вилка_цен       : вилка_цен,
       путь            : путь,
