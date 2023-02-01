@@ -111,43 +111,46 @@ if ($(панель = '.панель_сортировки_и_фильтра ').le
     (q = $(this)).parent ().prev ().toggleClass ('a').text (q.text ());
     запрос_фильтра (2);
   })
-  $('body').on ('click', панель + '.чекбоксы.категории i', function () {
-    условие = $(this).attr ('путь');
+  $('body').on ('click', панель + '.чекбоксы.категории .v', function () {
+    условие = $(this).parent ().attr ('путь');
     длинна_условия = условие.split ('/').length;
     if ($(this).hasClass ('a')) {
-      $(панель + '.чекбоксы.категории > *').each (function () {
+      $(панель + '.чекбоксы.категории p').each (function () {
         if ($(this).attr ('путь').includes (условие)) $(this).addClass ('a');
       })
       for (i = длинна_условия; i > 1; i--) {
-        условие_для_строчки = условие.split ('/').slice (1, i - 1).join ('/') + '/';
+        условие_для_строчки = условие.split ('/').slice (1, i - 1).join ('/');
         if (условие_для_строчки != '') {
           условие_для_строчки = условие.split ('/')[0] + '/' + условие_для_строчки;
           щет_категорий = 0;
-          $(панель + '.чекбоксы.категории > *').each (function () {
-            if ($(this).attr ('путь').includes (условие_для_строчки)) {
-              if (!$(this).hasClass ('a')) {
-                щет_категорий++;
+          $(панель + '.чекбоксы.категории p').each (function () {
+            if ($(this).attr ('путь').includes (условие_для_строчки))
+              {
+                if (!$(this).hasClass ('a'))
+                  {
+                    щет_категорий++;
+                  }
               }
-            }
           })
-          if (щет_категорий == 1) $(панель + '.чекбоксы.категории > *[путь="' + условие_для_строчки + '"]').addClass ('a');
+          if (щет_категорий == 1) $(панель + '.чекбоксы.категории p[путь="' + условие_для_строчки + '"]').addClass ('a');
         }
       }
     }
-    if (!$(this).hasClass('a')) {
-      $(панель + '.чекбоксы.категории > *').each (function () {
-        if ($(this).attr ('путь').includes (условие)) $(this).removeClass ('a');
-      })
-      for (i = 0; i < длинна_условия; i++) {
-        $(панель + '.чекбоксы.категории > *[путь="' + условие.split ('/').slice (0, i) + '"]').removeClass ('a');
-        $(панель + '.чекбоксы.категории > *').each (function () {
-          item = $(this);
-          if (item.attr ('путь') == условие.split ('/').slice (0, i).join ('/') + '/') {
-            item.removeClass ('a');
-          }
+    if (!$(this).hasClass ('a'))
+      {
+        $(панель + '.чекбоксы.категории p').each (function () {
+          if ($(this).attr ('путь').includes (условие)) $(this).removeClass ('a');
         })
+        for (i = 0; i < длинна_условия; i++) {
+          $(панель + '.чекбоксы.категории p[путь="' + условие.split ('/').slice (0, i) + '"]').removeClass ('a');
+          $(панель + '.чекбоксы.категории p').each (function () {
+            item = $(this);
+            if (item.attr ('путь') == условие.split ('/').slice (0, i).join ('/') + '/') {
+              item.removeClass ('a');
+            }
+          })
+        }
       }
-    }
     запрос_фильтра (3);
   })
   // Мигрируем цифровую механику из ленты каталога в динамику
@@ -261,8 +264,8 @@ if ($(панель = '.панель_сортировки_и_фильтра ').le
   $('body').on ('click', панель + 'button:eq(0)', function () { return false; });
   $('body').on ('click', панель + 'button:eq(1)', function () {
     $(панель + '> :nth-child(2) > span').html ('');
-    $(панель + '.keyup').eq(0).val ('');
-    $(панель + '.keyup').eq(1).val ('');
+    $(панель + '.keyup').eq (0).val ('');
+    $(панель + '.keyup').eq (1).val ('');
     p0 = $(панель + '.tT0 *');
     p0.eq (0).text(p0.last ().text ());
     p1 = $(панель + '.tT1 *');
@@ -292,32 +295,33 @@ if ($(панель = '.панель_сортировки_и_фильтра ').le
         }
       );
     });
-    $ ('body').on ('click', панель + '.чекбоксы.категории p i', function () {
-      парент = $ (this).parent ().toggleClass ('выпал');
-      метка = парент.attr ('метка').split (', ');
-      путь  = парент.attr ('путь');
-      if (!парент.hasClass ('выпал'))
-        {
-          $ (this) . text ('+');
-        }
-      else
-        {
-          $ (this) . text ('-');
-        }
-      $(панель + '.чекбоксы.категории p').each (function () {
-        if (путь == $(this).attr ('путь'))          return;
-        if (!$(this).attr ('путь').includes (путь)) return;
+    $ ('body').on ('click', панель + '.чекбоксы.категории i:not(.a)', function ()
+      {
+        парент = $ (this).parent ().toggleClass ('выпал');
+        метка = парент.attr ('метка').split (', ');
+        путь  = парент.attr ('путь');
         if (!парент.hasClass ('выпал'))
           {
-            $ (this) . css ('display', 'none');
+            $ (this) . text ('+');
           }
-        else if ((парент . attr ('путь') . split ('/').length + 1) == $ (this) . attr ('путь') . split ('/') . length)
+        else
           {
-            $ (this) . css ('display', 'block');
+            $ (this) . text ('-');
           }
+        $(панель + '.чекбоксы.категории p').each (function () {
+          if (путь == $(this).attr ('путь'))          return;
+          if (!$(this).attr ('путь').includes (путь)) return;
+          if (!парент.hasClass ('выпал'))
+            {
+              $ (this) . css ('display', 'none');
+            }
+          else if ((парент . attr ('путь') . split ('/').length + 1) == $ (this) . attr ('путь') . split ('/') . length)
+            {
+              $ (this) . css ('display', 'block');
+            }
+        });
+        return false;
       });
-      return false;
-    });
     console.log
       (
         `
