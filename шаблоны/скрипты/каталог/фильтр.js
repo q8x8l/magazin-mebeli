@@ -42,6 +42,7 @@ if ($(панель = '.панель_сортировки_и_фильтра ').le
                   // Массив у меня
       // Запрограммируем на вывод в главной
   $('body').on ('keyup', панель + '.keyup', function (event) {
+    return false;
     event = event || window.event;
     if (this.value.match (/[^0-9]/g)) {
       this.value = this.value.replace (/[^0-9]/g, '');
@@ -49,9 +50,11 @@ if ($(панель = '.панель_сортировки_и_фильтра ').le
     запрос_фильтра (0);
   })
   $('body').on ('click', панель + '.чекбоксы.бренды i', function () {
+    return false;
     запрос_фильтра (1);
   })
   $('body').on ('click', панель + '.toggleText span', function () {
+    return false;
     (q = $(this)).parent ().prev ().toggleClass ('a').text (q.text ());
     запрос_фильтра (2);
   })

@@ -19,39 +19,38 @@
 			Затем выполню подзагрузку веток аяксом (без удаления)
 		`
 	);
-    $('body').on ('click', панель + '.чекбоксы.дерево i:not(.v)', function ()
-    	{
-	        парент = $(this).parent ().toggleClass ('выпал');
-	        метка  = парент.attr ('метка').split (', ');
-	        путь   = парент.attr ('путь');
-	        if (!парент.hasClass ('выпал'))
+	$('body').on ('click', панель + '.чекбоксы.дерево i:not(.v)', function ()
+		{
+      парент = $(this).parent ().toggleClass ('выпал');
+      метка  = парент.attr ('метка').split (', ');
+      путь   = парент.attr ('путь');
+      if (!парент.hasClass ('выпал'))
 				{
 					$(this).text ('+');
 				}
-	        else
+		      else
 				{
 					$(this).text ('-');
 				}
-	        return false;
-    	})
-    ;
-	console.log ($(панель + '.чекбоксы.дерево p'));
-    // $(панель + '.чекбоксы.дерево p').each (
-    // 	function ()
-	//         {
-	// 			if (путь == $(this).attr ('путь'))          return false;
-	// 			if (!$(this).attr ('путь').includes (путь)) return false;
-	// 			if (!парент.hasClass ('выпал'))
-	// 				{
-	// 				  $(this).css ('display', 'none');
-	// 				}
-	// 			if ((парент . attr ('путь') . split ('/').length + 1) == $ (this) . attr ('путь') . split ('/') . length)
-	// 				{
-	// 					$(this).css ('display', 'block');
-	// 				}
-	//         }
-    // 	)
-    // ;
+		    $(панель + '.чекбоксы.дерево p').each (
+		    	function ()
+			        {
+								if (путь == $(this).attr ('путь'))          return;
+								if (!$(this).attr ('путь').includes (путь)) return;
+								if (!парент.hasClass ('выпал'))
+									{
+									  $(this).css ('display', 'none');
+									}
+								else if ((парент.attr ('путь').split ('/').length + 1) == $ (this).attr ('путь').split ('/').length)
+									{
+										$(this).css ('display', 'block');
+									}
+			        }
+		    	)
+		    ;
+	      return false;
+		})
+	;
 // Закрыл выпадение потомков
 // Событие Чека по элементам дерева
 	// $('body').on ('click', панель + '.чекбоксы.дерево .v', function () {

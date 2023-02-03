@@ -40,7 +40,7 @@
         })
       }
     })
-    $('body').on ('click', панель + '.toggle,' + панель + '.чекбоксы > *', function () {
+    $('body').on ('click', панель + '.toggle', function () {
       $(this).toggleClass ('a');
     })
   })
