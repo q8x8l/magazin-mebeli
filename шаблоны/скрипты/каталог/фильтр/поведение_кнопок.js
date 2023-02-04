@@ -1,24 +1,26 @@
 // Выравнивание дерева
-    $((панель = '.панель_сортировки_и_фильтра ') + '.чекбоксы.дерево p').each (function () {
-      if ($(this).attr ('метка').split (', ').length == 2)
-        {
-          $(this).prepend ('<i>+</i>');
-        }
-      $(this).prepend ('<i class="v">v</i>');
-      $(this).css (
-        {
-          'margin-left' : (длина = ($ (this).attr ('путь').split ('/').length - 2) * 20 - 20 + 'px'),
-          'width'       : 'calc(100% - ' + длина + ')',
-        }
-      );
-    });
+	function Выравнивание_дерева ()
+		{
+	    $((панель = '.панель_сортировки_и_фильтра ') + '.чекбоксы.дерево p').each (function () {
+	    	if (!$(this).find ('i').length)
+	    		{
+			      if ($(this).attr ('метка').split (', ').length == 2)
+			        {
+			          $(this).prepend ('<i>+</i>');
+			        }
+			      $(this).prepend ('<i class="v">v</i>');
+	    		}
+	      $(this).css (
+	        {
+	          'margin-left' : (длина = ($ (this).attr ('путь').split ('/').length - 2) * 20 - 20 + 'px'),
+	          'width'       : 'calc(100% - ' + длина + ')',
+	        }
+	      );
+	    });
+		}
+	Выравнивание_дерева ();
 // Завершил выравнивание дерева
 // Выпадение потомков
-	console.log (
-		`
-			Создам функцию на плюсик и ви вылетающих веток
-		`
-	);
 	$('body').on ('click', панель + '.чекбоксы.дерево i:not(.v)', function ()
 		{
       парент = $(this).parent ().toggleClass ('выпал');
@@ -49,10 +51,11 @@
 		    	)
 		    ;
 		    $.get (домен + 'блоки/каталог/фильтр/вылет_ветки.php', {
-		    	путь : $(this).parent ().attr ('путь'),
+		    	путь 				 : (путь = $(this).parent ().attr ('путь')),
+		    	ветка_дерева : путь.split ('/').length - 1,
 		    }, (трафик) => {
-		    	// console.log (трафик);
-		    	console.log ($(this).parent ().after (трафик));
+		    	$(this).parent ().after (трафик);
+		    	Выравнивание_дерева ();
 		    });
 	      return false;
 		})
