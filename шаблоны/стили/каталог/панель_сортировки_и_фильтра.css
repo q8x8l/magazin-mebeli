@@ -1,91 +1,91 @@
 .hr0,.панель_сортировки_и_фильтра
   {
-    max-width: var(--max-width);
-    margin: auto;
+    max-width : var(--max-width);
+    margin    : auto;
   }
 .hr0
   {
-    height: 1px;
-    background: #ebebeb;
+    height     : 1px;
+    background : #ebebeb;
   }
 ul.панель_сортировки_и_фильтра
   {
-    display: flex;
-    justify-content: space-between;
-    font-size: 16px;
-    padding: 25px 20px 10px;
-    position: relative;
+    display         : flex;
+    justify-content : space-between;
+    font-size       : 16px;
+    padding         : 25px 20px 10px;
+    position        : relative;
   }
 .панель_сортировки_и_фильтра .a + form
   {
-    display: block;
+    display : block;
   }
 .панель_сортировки_и_фильтра form
   {
-    display: none;
-    position: absolute;
-    background: #fff;
-    border: 1px solid #333;
-    border-radius: 5px;
-    z-index: 2;
-    padding: 10px;
-    width: 300px;
-    padding: 10px 20px 15px;
+    display       : none;
+    position      : absolute;
+    background    : #fff;
+    border        : 1px solid #333;
+    border-radius : 5px;
+    z-index       : 2;
+    padding       : 10px;
+    width         : 300px;
+    padding       : 10px 20px 15px;
   }
 .панель_сортировки_и_фильтра i span
   {
-    vertical-align: 0;
+    vertical-align : 0;
   }
 .панель_сортировки_и_фильтра i
   {
-    cursor: pointer;
-    transition: all .2s;
+    cursor     : pointer;
+    transition : all .2s;
   }
 .панель_сортировки_и_фильтра form i
   {
-    display: block;
+    display : block;
   }
 .панель_сортировки_и_фильтра i:hover
   {
-    color: #1e807f;
-    fill: #1e807f;
+    color : #1e807f;
+    fill  : #1e807f;
   }
 .панель_сортировки_и_фильтра svg
   {
-    width: 30px;
-    height: 30px;
-    vertical-align: -10px;
+    width          : 30px;
+    height         : 30px;
+    vertical-align : -10px;
   }
 .панель_сортировки_и_фильтра > :nth-child(2)
   {
-    text-align: right;
+    text-align : right;
   }
 .панель_сортировки_и_фильтра form > p:first-child
   {
-    border: 0;
-    margin: 0;
+    border : 0;
+    margin : 0;
   }
 .панель_сортировки_и_фильтра form > p
   {
-    display: flex;
-    cursor: pointer;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 0;
-    transition: all .2s;
+    display         : flex;
+    cursor          : pointer;
+    justify-content : space-between;
+    align-items     : center;
+    padding         : 5px 0;
+    transition      : all .2s;
   }
 .панель_сортировки_и_фильтра > :nth-child(2) form
   {
-    right: 0;
-    text-align: left;
+    right      : 0;
+    text-align : left;
   }
 .панель_сортировки_и_фильтра form > p:hover
   {
-    color: #559f9e;
+    color : #559f9e;
   }
 .панель_сортировки_и_фильтра form > p:hover *
   {
-    fill: #559f9e;
+    fill : #559f9e;
   }
 .панель_сортировки_и_фильтра :nth-child(1) form p svg
   {
@@ -98,20 +98,20 @@ ul.панель_сортировки_и_фильтра
   }
 .панель_сортировки_и_фильтра form svg + svg,.панель_сортировки_и_фильтра form p + div,.панель_сортировки_и_фильтра form .a svg:nth-child(1)
   {
-    display: none;
+    display : none;
   }
 .панель_сортировки_и_фильтра .a svg:nth-child(2)
   {
-    display: inherit;
+    display : inherit;
   }
 .панель_сортировки_и_фильтра .a:first-child + div
   {
-    overflow: hidden;
+    overflow : hidden;
   }
 .панель_сортировки_и_фильтра .a + div
   {
-    display: block;
-    position: relative;
+    display  : block;
+    position : relative;
   }
 .панель_сортировки_и_фильтра .toggleText:nth-child(2)
   {
@@ -129,15 +129,15 @@ ul.панель_сортировки_и_фильтра
   }
 .панель_сортировки_и_фильтра input:nth-child(1)
   {
-    float: left;
+    float : left;
   }
 .панель_сортировки_и_фильтра input:nth-child(2)
   {
-    float: right;
+    float : right;
   }
 .панель_сортировки_и_фильтра .чекбоксы.дерево
   {
-    background: url('../картинки/точки_1.gif');
+    background : url('../картинки/точки_1.gif');
   }
 .панель_сортировки_и_фильтра .чекбоксы i
   {
@@ -203,95 +203,95 @@ ul.панель_сортировки_и_фильтра
 .панель_сортировки_и_фильтра form div.toggleText > p:nth-child(1),
 .панель_сортировки_и_фильтра form div.toggleText p + p *
   {
-    padding: 2px;
+    padding : 2px;
   }
 .панель_сортировки_и_фильтра .чекбоксы.дерево p
   {
-    display: none;
+    display : none;
   }
 .панель_сортировки_и_фильтра .чекбоксы.дерево p[метка*="1, "],
 .панель_сортировки_и_фильтра .чекбоксы.дерево p[метка="1"]
   {
-    display: block;
+    display : block;
   }
 .панель_сортировки_и_фильтра form .toggleText > p
   {
-    border: 1px solid gray;
-    position: relative;
+    border   : 1px solid gray;
+    position : relative;
   }
 .панель_сортировки_и_фильтра .toggleText > :first-child:after
   {
-    content: '';
-    display: block;
-    position: absolute;
-    inset: 6px 10px auto auto;
-    border-right: 1px solid gray;
-    border-bottom: 1px solid gray;
-    height: 5px;
-    width: 5px;
-    transform: rotate(45deg);
+    content       : '';
+    display       : block;
+    position      : absolute;
+    inset         : 6px 10px auto auto;
+    border-right  : 1px solid gray;
+    border-bottom : 1px solid gray;
+    height        : 5px;
+    width         : 5px;
+    transform     : rotate(45deg);
   }
 .панель_сортировки_и_фильтра .toggleText p + p
   {
-    position: absolute;
-    z-index: 2;
-    background: #fff;
-    inset: 24px 0 auto 0;
-    display: none;
+    position   : absolute;
+    z-index    : 2;
+    background : #fff;
+    inset      : 24px 0 auto 0;
+    display    : none;
   }
 .панель_сортировки_и_фильтра .toggleText .a + p
   {
-    display: block;
+    display : block;
   }
 .панель_сортировки_и_фильтра .toggleText p + p *
   {
-    cursor: pointer;
-    display: block;
+    cursor  : pointer;
+    display : block;
   }
 .панель_сортировки_и_фильтра .toggleText p + p span:hover
   {
-    background: #1e807f;
-    color: #fff;
+    background : #1e807f;
+    color      : #fff;
   }
 .панель_сортировки_и_фильтра button
   {
-    cursor: auto;
-  	display: flex;
-  	width: 100%;
-  	margin-top: 10px;
-  	border-radius: 5px;
-  	justify-content: center;
-  	align-items: center;
-  	line-height: 40px;
-    font-size: 16px;
+    cursor          : auto;
+  	display         : flex;
+  	width           : 100%;
+  	margin-top      : 10px;
+  	border-radius   : 5px;
+  	justify-content : center;
+  	align-items     : center;
+  	line-height     : 40px;
+    font-size       : 16px;
   }
 .панель_сортировки_и_фильтра button:hover
   {
-    background: #e9e9ed;
+    background : #e9e9ed;
   }
 .панель_сортировки_и_фильтра button i
   {
-    cursor: auto;
+    cursor : auto;
   }
 .панель_сортировки_и_фильтра button i:hover
   {
-    color: #000;
+    color : #000;
   }
 .панель_сортировки_и_фильтра button svg
   {
-    margin: 0 15px;
+    margin : 0 15px;
   }
 .панель_сортировки_и_фильтра button i
   {
-    margin: 0 5px;
+    margin : 0 5px;
   }
 .панель_сортировки_и_фильтра button + *
   {
-    cursor: pointer;
-    background: #fff;
-    border: 1px solid gray;
+    cursor     : pointer;
+    background : #fff;
+    border     : 1px solid gray;
   }
 .панель_сортировки_и_фильтра button + button:hover
   {
-    background: #fff;
+    background : #fff;
   }
