@@ -119,10 +119,3 @@ $('body').on ('click', '.маленькие_картинки img', function ()
     q.parent ().prev ().children ().attr ('src', $(this).attr ('src'));
   }
 );
-console.log
-  (
-    `
-    файл (маленькая_карточка_товара.js)
-      - клавиша Esc закрывает окно всплывающее;
-    `
-  );
