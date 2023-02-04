@@ -4,6 +4,7 @@
         {
           $(this).prepend ('<i>+</i>');
         }
+      $(this).prepend ('<i class="v">v</i>');
       $(this).css (
         {
           'margin-left' : (длина = ($ (this).attr ('путь').split ('/').length - 2) * 20 - 20 + 'px'),
