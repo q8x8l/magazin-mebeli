@@ -4,11 +4,10 @@
 	    $((панель = '.панель_сортировки_и_фильтра ') + '.чекбоксы.дерево p').each (function () {
 	    	if (!$(this).find ('i').length)
 	    		{
-			      if ($(this).attr ('метка').split (', ').length == 2)
+			      if ($(this).prepend ('<i class="v">v</i>').attr ('метка').split (', ').length == 2)
 			        {
 			          $(this).prepend ('<i>+</i>');
 			        }
-			      $(this).prepend ('<i class="v">v</i>');
 	    		}
 	      $(this).css (
 	        {
