@@ -149,10 +149,10 @@ ul.панель_сортировки_и_фильтра
 .панель_сортировки_и_фильтра .чекбоксы i
   {
     border          : 1px solid #1e807f;
-    background      : #1e807f;
+    background      : #fff;
     font-size       : 12px;
     font-family     : Arial;
-    color           : #fff;
+    color           : #000;
     display         : inline-flex;
     justify-content : center;
     align-items     : center;
@@ -163,7 +163,7 @@ ul.панель_сортировки_и_фильтра
   }
 .панель_сортировки_и_фильтра .чекбоксы i.a.v
   {
-    color: #1e807f;
+    color : #fff;
   }
 .панель_сортировки_и_фильтра .чекбоксы img
   {
