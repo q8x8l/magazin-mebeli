@@ -8,6 +8,10 @@
 			        {
 			          $(this).prepend ('<i>+</i>');
 			        }
+			      else
+				    	{
+				    		$(this).prepend ('<i class="b"></i>');
+				      }
 	    		}
 	      $(this).css (
 	        {

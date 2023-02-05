@@ -148,17 +148,20 @@ ul.панель_сортировки_и_фильтра
   }
 .панель_сортировки_и_фильтра .чекбоксы i
   {
+    display      : inline-flex;
+    width        : 15px;
+    height       : 15px;
+    margin-right : 5px;
+  }
+.панель_сортировки_и_фильтра .чекбоксы i:not(.b)
+  {
     border          : 1px solid #1e807f;
     background      : #fff;
     font-size       : 12px;
     font-family     : Arial;
     color           : #000;
-    display         : inline-flex;
     justify-content : center;
     align-items     : center;
-    width           : 15px;
-    height          : 15px;
-    margin-right    : 5px;
     border-radius   : 3px;
   }
 .панель_сортировки_и_фильтра .чекбоксы i.a.v
