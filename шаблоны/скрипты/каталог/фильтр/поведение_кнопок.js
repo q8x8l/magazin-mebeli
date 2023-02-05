@@ -31,14 +31,15 @@
 					{
 						if (путь == $(this).attr ('путь'))          return;
 						if (!$(this).attr ('путь').includes (путь)) return;
-						if (парент.hasClass ('выпал'))
-							{
-								$(this).removeClass ('дисплей_нет');
-							}
-						else
-							{
-								$(this).addClass    ('дисплей_нет');
-							}
+						$(this).toggleClass ('дисплей_нет');
+						// if (парент.hasClass ('выпал'))
+						// 	{
+						// 		$(this).removeClass ('дисплей_нет');
+						// 	}
+						// else
+						// 	{
+						// 		$(this).addClass    ('дисплей_нет');
+						// 	}
 					}
 				)
 			;
