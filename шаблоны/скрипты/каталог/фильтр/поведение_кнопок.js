@@ -29,17 +29,9 @@
 			$(панель + '.чекбоксы.дерево p').each (
 				function ()
 					{
-						if (путь == $(this).attr ('путь'))          return;
-						if (!$(this).attr ('путь').includes (путь)) return;
-						$(this).toggleClass ('дисплей_нет');
-						// if (парент.hasClass ('выпал'))
-						// 	{
-						// 		$(this).removeClass ('дисплей_нет');
-						// 	}
-						// else
-						// 	{
-						// 		$(this).addClass    ('дисплей_нет');
-						// 	}
+						if (путь == (зис = $(this)).attr ('путь')) return;
+						if (!зис.attr ('путь').includes (путь)) 	 return;
+						зис.toggleClass ('дисплей_нет');
 					}
 				)
 			;
