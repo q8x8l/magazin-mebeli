@@ -148,10 +148,10 @@ ul.панель_сортировки_и_фильтра
   }
 .панель_сортировки_и_фильтра .чекбоксы i
   {
-    content         : "\e903";
     border          : 1px solid #1e807f;
     background      : #1e807f;
-    font            : 9px 'icomoon';
+    font-size       : 12px;
+    font-family     : Arial;
     color           : #fff;
     display         : inline-flex;
     justify-content : center;
@@ -160,17 +160,10 @@ ul.панель_сортировки_и_фильтра
     height          : 15px;
     margin-right    : 5px;
     border-radius   : 3px;
-    font-size       : 12px;
-    color           : #fff;
-    font-family     : Arial;
   }
-.панель_сортировки_и_фильтра .чекбоксы .a i
+.панель_сортировки_и_фильтра .чекбоксы i.a.v
   {
-    font-size     : 0;
-    content       : '';
-    border-.color : gray;
-    background    : none;
-    float         : left;
+    color: #1e807f;
   }
 .панель_сортировки_и_фильтра .чекбоксы img
   {
