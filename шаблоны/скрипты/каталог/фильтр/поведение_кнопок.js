@@ -44,14 +44,8 @@
 	    $((панель = '.панель_сортировки_и_фильтра ') + '.чекбоксы.дерево p').each (function () {
 	    	if (!$(this).find ('i').length)
 	    		{
-			      if ($(this).prepend ('<i class="v">v</i>').attr ('метка').split (', ').length == 2)
-			        {
-			          $(this).prepend ('<i>+</i>');
-			        }
-			      else
-				    	{
-				    		$(this).prepend ('<i class="b"></i>');
-				      }
+			      if ($(this).prepend ('<i class="v">v</i>').attr ('метка').split (', ').length == 2) $(this).prepend ('<i>+</i>');
+			      else $(this).prepend ('<i class="b"></i>');
 	    		}
 	      $(this).css (
 	        {
@@ -63,6 +57,21 @@
 		};
 	Выравнивание_дерева ();
 // Завершил выравнивание дерева
+// Вылет ствола дерева
+	$('body').on ('click', панель + '.toggle.дерево', function ()
+		{
+			$.get (домен + 'блоки/каталог/фильтр/вылет_ветки.php',
+			  {
+			  	путь 				 : new URLSearchParams (window.location.search).get ('путь'),
+			  	ветка_дерева : 1,
+			  }, (трафик) => {
+			  	$('.чекбоксы.дерево').html (трафик);
+			  	Выравнивание_дерева ();
+			  }
+			);
+		}
+	);
+// 
 // Вылет потомков
 	$('body').on ('click', панель + '.чекбоксы.дерево i:not(.v)', function ()
 		{
