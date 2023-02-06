@@ -142,7 +142,7 @@
 			if (исходный_клик.hasClass ('a'))
 			  {
 			    $(панель + '.чекбоксы.дерево p').each (function () {
-			      if ($(this).attr ('путь').includes (условие)) $(this).addClass ('a');
+			      if ($(this).attr ('путь').includes (условие)) $(this).children (1).addClass ('a');
 			    })
 			//     for (i = 0; i < длинна_условия; i++) {
 			//       $(панель + '.чекбоксы.дерево p[путь="' + условие.split ('/').slice (0, i) + '"]').removeClass ('a');
