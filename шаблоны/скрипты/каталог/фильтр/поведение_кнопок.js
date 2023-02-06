@@ -126,14 +126,13 @@
 			);
 			$(дерево).find ('> p').each (function ()
 				{
+					зис_путь 					 = $(this).attr ('путь');
+					зис_потомок_1 		 = $(this).children (1);
+					исходный_клик_путь = исходный_клик.parent ().attr ('путь').split ('/').slice (0, -2).join ('/') + '/';
 					if (количество_поломков == 0)
-						{
-							if ($(this).attr ('путь') == исходный_клик.parent ().attr ('путь').split ('/').slice (0, -2).join ('/') + '/') $(this).children (1).addClass ('a');
-						}
+						if (зис_путь == исходный_клик_путь) зис_потомок_1.addClass 		('a');
 					if (количество_поломков == 1)
-						{
-							if ($(this).attr ('путь') == исходный_клик.parent ().attr ('путь').split ('/').slice (0, -2).join ('/') + '/') $(this).children (1).removeClass ('a');
-						}
+						if (зис_путь == исходный_клик_путь) зис_потомок_1.removeClass ('a');
 				}
 			);
 
