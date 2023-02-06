@@ -107,26 +107,20 @@
 		`
 			клик по ви на дереве:
 				Выполню анчек парента при нулевом чеке веток потомков
+					Захватили ветки потомки по клику на ветку потомка
 		`
 	);
 	$('body').on ('click', панель + (дерево = '.чекбоксы.дерево') + ' p i.v', function ()
 		{
 			пробег_по_дереву_и_чека_по_потомкам ($(this).parent (), тег = 'ви');
 			(исходный_клик = $(this)).toggleClass ('a');
-			console.log ();
-			console.log (`Функция клик по ви..`);
-			console.log (исходный_клик);
-			console.log (исходный_клик.parent ().attr ('путь'));
-			console.log (исходный_клик.parent ().parent ());
-			console.log (`Всё дерево`);
-			console.log (исходный_клик.parent ().parent ().children ());
-			console.log ();
-			console.log (`Ветки по условию "${исходный_клик.parent ().attr ('путь').split ('/').slice (0, -2)}" нужно искать через див исходного блока`);
+			console.log (`Пробы:`);
+			
 
 			исходный_клик.parent ().parent ().children ().each (function ()
 				{
-					ветка_дерева = $(this);
-					console.log (ветка_дерева.attr ('путь'));
+					if ((ветка_дерева = $(this)).attr ('путь').length == (строка_по_исходному_клику = исходный_клик.parent ().attr ('путь').split ('/').slice (0, -2).join ('/')).length + 1) return;
+					if (!ветка_дерева.attr ('путь').includes (строка_по_исходному_клику))																																								 											return;
 					console.log (ветка_дерева);
 				}
 			);
