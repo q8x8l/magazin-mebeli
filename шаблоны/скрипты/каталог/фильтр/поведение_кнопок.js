@@ -28,10 +28,10 @@
 								{
 									case 'v a':
 										tag_v.removeClass ('a');
-										break;
+									break;
 									case 'v':
 										tag_v.addClass 		('a');
-										break;
+									break;
 								}
 						}
 				}
@@ -103,10 +103,10 @@
 					    }
 					  );
 				    парент.addClass ('есть_ветка');
-						break;
+					break;
 					case 'есть_ветка':
 						первоначальный_клик.text ('+');
-						break;
+					break;
 				}
 		}
 	);
