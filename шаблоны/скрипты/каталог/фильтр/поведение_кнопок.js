@@ -124,14 +124,18 @@
 					if (ветка_дерева.children (1).hasClass ('a')) количество_поломков --;
 				}
 			);
-			if (количество_поломков == 0)
+			$(дерево).find ('> p').each (function ()
 				{
-					$(дерево).find ('> p').each (function ()
+					if (количество_поломков == 0)
 						{
 							if ($(this).attr ('путь') == исходный_клик.parent ().attr ('путь').split ('/').slice (0, -2).join ('/') + '/') $(this).children (1).addClass ('a');
 						}
-					);
+					if (количество_поломков == 1)
+						{
+							if ($(this).attr ('путь') == исходный_клик.parent ().attr ('путь').split ('/').slice (0, -2).join ('/') + '/') $(this).children (1).removeClass ('a');
+						}
 				}
+			);
 
 
 
