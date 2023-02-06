@@ -136,9 +136,7 @@
 				      $(панель + `.чекбоксы.дерево p[путь="${условие.split ('/').slice (0, i)}"]`).children (1).removeClass ('a');
 				      $(панель + '.чекбоксы.дерево p').each (function () {
 				        зис = $(this);
-				        if (зис.attr ('путь') == условие.split ('/').slice (0, i).join ('/') + '/') {
-				          зис.children (1).removeClass ('a');
-				        }
+				        if (зис.attr ('путь') == условие.split ('/').slice (0, i).join ('/') + '/') зис.children (1).removeClass ('a');
 				      })
 			    	}
 			
