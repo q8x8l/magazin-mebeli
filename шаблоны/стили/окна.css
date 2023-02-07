@@ -1,308 +1,370 @@
-.окно {
-  position: fixed;
-  inset: 0;
-  display: none;
-  overflow: scroll;
-  font-size: 15px;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 3;
-}
-.окно .тень {
-  position: fixed;
-  inset: 0;
-  opacity: 0;
-  background: #000;
-}
-.окно > div {
-  padding: 50px;
-  border-radius: 10px;
-  background:  #fff;
-  position: absolute;
-  inset: 20px auto auto;
-  z-index: 1;
-  opacity: 0;
-}
-.окно .p1 {
-  font-size: 26px;
-  margin-bottom: 30px;
-}
-.окно .p2 {
-  font-size: 14px;
-  color: gray;
-}
-.окно .тел {
-  font-size: 20px;
-  color: #000;
-  font-weight: 600;
-}
-.окно .p3 {
-  margin: 10px 0;
-}
-.окно table {
-  margin: 30px 0;
-}
-.окно table td {
-  padding-bottom: 10px;
-  vertical-align: middle;
-}
-.окно table svg {
-  fill: #abacaf;
-  width: 30px;
-  height: 30px;
-}
-.окно table a {
-  color: #0470C4;
-  text-decoration: underline;
-}
-.окно table a:hover {
-  text-decoration: none;
-}
-.окно .социал svg {
-  width: 45px;
-  height: 45px;
-}
-.окно .социал a {
-  position: relative;
-  transition: top .5s;
-  top: 0;
-}
-.окно .социал a:hover {
-  top: -2px;
-}
-.окно.окно_3 input,.окно.окно_3 textarea,.окно.окно_3 button {
-  display: inline-flex;
-  margin: 0;
-  border: 0;
-}
-.окно input,.окно textarea,.окно button {
-  display: block;
-  padding: 15px 20px;
-  font-size: 16px;
-  margin-bottom: 20px;
-  color: #6c6d73;
-  border: 1px solid #e0e0e0;
-  border-radius: 5px;
-  transition: box-shadow .18s;
-}
-.окно textarea {
-  min-width: 295px;
-  height: 170px;
-}
-.окно input:focus,.окно textarea:focus {
-  box-shadow: 0 0 0 2px #d2e6e5;
-}
-.окно button {
-  display: inline-block;
-  padding: 15px 30px;
-  background: #cab69d;
-  cursor: pointer;
-  border: 0;
-  color: #000;
-}
-.окно_3 > div {
-  width: 95%;
-  max-width: 980px;
-}
-.окно .привью_товара {
-  font-size: 0;
-}
-.окно .привью_товара > * {
-  display: inline-block;
-  width: calc(50% - 20px);
-  position: relative;
-  font-size: 14px;
-}
-.окно .привью_товара > :first-child {
-  margin-right: 40px;
-  overflow: hidden;
-}
-.окно .привью_товара .p1 {
-  color: #5b5b5b;
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-.окно .привью_товара .p2 {
-  color: #5b5b5b;
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-.окно .привью_товара .p2 a {
-  font-size: 14px;
-  color: #0470c4;
-  transition: all .2s;
-  border-bottom: 1px solid #fff;
-}
-.окно .привью_товара .p2 :hover {
-  border-bottom: 1px solid #0470c4;
-}
-.окно .привью_товара table {
-  color: #96989b;
-  font-size: 14px;
-  margin: 0 0 20;
-}
-.окно .привью_товара .определения {
-  color: #5b5b5b;
-}
-.окно_3 .боковая_кнопка {
-  position: absolute;
-  top: calc(50% - 25px);
-  width: 50px;
-  height: 50px;
-  background: #fff;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.окно_3 .боковая_кнопка.лево {
-  left: -100px;
-}
-.окно_3 .боковая_кнопка.лево:after {
-  content: '';
-  width: 15px;
-  height: 15px;
-  border-left: 2px solid #000;
-  border-bottom: 2px solid #000;
-  display: block;
-  transform: rotate(45deg);
-  margin: 15px 0 0 20px;
-}
-.окно_3 .боковая_кнопка.право:after {
-  content: '';
-  width: 15px;
-  height: 15px;
-  border-right: 2px solid #000;
-  border-bottom: 2px solid #000;
-  display: block;
-  transform: rotate(-45deg);
-  margin: 15px 0 0 15px;
-}
-.окно_3 .боковая_кнопка.лево:hover:after,.окно_3 .боковая_кнопка.право:hover:after {
-  border-color: #1e807f;
-}
-.окно_3 .боковая_кнопка.право {
-  right: -100px;
-}
-.окно.окно_4 > div {
-  padding: 20px;
-}
-.окно_4 a + p {
-  color: red;
-  margin-top: 10px;
-}
-.окно_4 .щет {
-  vertical-align: 5px;
-}
-.окно_4 li {
-  overflow: hidden;
-  max-width: 500px;
-  position: relative;
-}
-.окно_4 li a {
-  color: #4d4b4b;
-  font-weight: 600;
-}
-.окно_4 [путь] svg {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  display: block;
-  background: #fff;
-  border-radius: 50%;
-  opacity: .5;
-  transition: all .5s;
-}
-.окно_4 [путь] svg:hover {
-  opacity: 1;
-  cursor: pointer;
-  fill: red;
-}
-.окно_4 form {
-  border: 1px solid #e0e0e0;
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-}
-.окно_4 form * {
-  cursor: pointer;
-  padding: 10px;
-  font-size: 16px;
-  color: #6c6d73;
-  border-radius: 5px;
-  float: left;
-  margin: 0;
-  background: #fff;
-  border: 0;
-  width: 30px;
-  outline: none;
-  text-align: center;
-}
-.окно_4 form :focus {
-  box-shadow: none;
-}
-.окно_4 form [type="text"] {
-cursor: text;
-width: 30px;
-padding: 10px 0;
-}
-.окно_4 img {
-  width: 20%;
-}
-.окно_4 .лента_маленькой_корзины div {
-  width: 40%;
-  padding: 20px 0 20px 20px;
-}
-.окно_4 .лента_маленькой_корзины form {
-  width: 20%;
-  margin-top: 20px;
-}
-.окно_4 .лента_маленькой_корзины li > p {
-  width: 20%;
-  padding-top: 20px;
-}
-.окно_4 .лента_маленькой_корзины li > * {
-  float: left;
-}
-.окно_4 .цена i {
-  font-style: normal;
-}
-.окно_4 .цена > :first-child {
-  display: none;
-}
-.окно_4 .цена :nth-child(2) {
-  text-decoration: line-through;
-}
-.окно_4 .цена :nth-child(3) {
-  font-weight: 600;
-}
-.окно_4 .цена span {
-  display: block;
-  text-align: right;
-}
-.окно_4 .итог .очистить_корзину {
-  cursor: pointer;
-}
-.окно_4 .итог {
-  display: flex;
-  justify-content: space-between;
-  line-height: 30px;
-}
-.окно_4 .итог svg {
-  width: 30px;
-  height: 30px;
-}
-.окно_4 .кнопка {
-  overflow: hidden;
-  margin-top: 15px;
-}
-.окно_4 .кнопка :hover {
-  background: #409392;
-}
-.окно_4 .кнопка * {
-  transition: all .3s;
-  float: right;
-  padding: 10px 20px;
-  color: #fff;
-  background: #1e807f;
-  border-radius: 5px;
-}
+.окно
+  {
+    position        : fixed;
+    inset           : 0;
+    display         : none;
+    overflow        : scroll;
+    font-size       : 15px;
+    display         : none;
+    justify-content : center;
+    align-items     : center;
+    z-index         : 3;
+  }
+.окно .тень
+  {
+    position   : fixed;
+    inset      : 0;
+    opacity    : 0;
+    background : #000;
+  }
+.окно > div
+  {
+    padding       : 50px;
+    border-radius : 10px;
+    background    :  #fff;
+    position      : relative;
+    z-index       : 1;
+    opacity       : 0;
+  }
+.окно .p1
+  {
+    font-size     : 26px;
+    margin-bottom : 30px;
+  }
+.окно .p2
+  {
+    font-size : 14px;
+    color     : gray;
+  }
+.окно .тел
+  {
+    font-size   : 20px;
+    color       : #000;
+    font-weight : 600;
+  }
+.окно .p3
+  {
+    margin : 10px 0;
+  }
+.окно table
+  {
+    margin : 30px 0;
+  }
+.окно table td
+  {
+    padding-bottom : 10px;
+    vertical-align : middle;
+  }
+.окно table svg
+  {
+    fill   : #abacaf;
+    width  : 30px;
+    height : 30px;
+  }
+.окно table a
+  {
+    color           : #0470C4;
+    text-decoration : underline;
+  }
+.окно table a:hover
+  {
+    text-decoration : none;
+  }
+.окно .социал svg
+  {
+    width  : 45px;
+    height : 45px;
+  }
+.окно .социал a
+  {
+    position   : relative;
+    transition : top .5s;
+    top        : 0;
+  }
+.окно .социал a:hover
+  {
+    top : -2px;
+  }
+.окно.окно_3 input,.окно.окно_3 textarea,.окно.окно_3 button
+  {
+    display : inline-flex;
+    margin  : 0;
+    border  : 0;
+  }
+.окно input,.окно textarea,.окно button
+  {
+    display       : block;
+    padding       : 15px 20px;
+    font-size     : 16px;
+    margin-bottom : 20px;
+    color         : #6c6d73;
+    border        : 1px solid #e0e0e0;
+    border-radius : 5px;
+    transition    : box-shadow .18s;
+  }
+.окно textarea
+  {
+    min-width : 295px;
+    height    : 170px;
+  }
+.окно input:focus,.окно textarea:focus
+  {
+    box-shadow : 0 0 0 2px #d2e6e5;
+  }
+.окно button
+  {
+    display    : inline-block;
+    padding    : 15px 30px;
+    background : #cab69d;
+    cursor     : pointer;
+    border     : 0;
+    color      : #000;
+  }
+.окно_3 > div
+  {
+    width     : 95%;
+    max-width : 980px;
+  }
+.окно .привью_товара
+  {
+    font-size : 0;
+  }
+.окно .привью_товара > *
+  {
+    display   : inline-block;
+    width     : calc(50% - 20px);
+    position  : relative;
+    font-size : 14px;
+  }
+.окно .привью_товара > :first-child
+  {
+    margin-right : 40px;
+    overflow     : hidden;
+  }
+.окно .привью_товара .p1
+  {
+    color         : #5b5b5b;
+    font-size     : 14px;
+    margin-bottom : 10px;
+  }
+.окно .привью_товара .p2
+  {
+    color         : #5b5b5b;
+    font-size     : 14px;
+    margin-bottom : 20px;
+  }
+.окно .привью_товара .p2 a
+  {
+    font-size     : 14px;
+    color         : #0470c4;
+    transition    : all .2s;
+    border-bottom : 1px solid #fff;
+  }
+.окно .привью_товара .p2 :hover
+  {
+    border-bottom : 1px solid #0470c4;
+  }
+.окно .привью_товара table
+  {
+    color     : #96989b;
+    font-size : 14px;
+    margin    : 0 0 20;
+  }
+.окно .привью_товара .определения
+  {
+    color : #5b5b5b;
+  }
+.окно_3 .боковая_кнопка
+  {
+    position      : absolute;
+    top           : calc(50% - 25px);
+    width         : 50px;
+    height        : 50px;
+    background    : #fff;
+    border-radius : 50%;
+    cursor        : pointer;
+  }
+.окно_3 .боковая_кнопка.лево
+  {
+    left : -100px;
+  }
+.окно_3 .боковая_кнопка.лево:after
+  {
+    content       : '';
+    width         : 15px;
+    height        : 15px;
+    border-left   : 2px solid #000;
+    border-bottom : 2px solid #000;
+    display       : block;
+    transform     : rotate(45deg);
+    margin        : 15px 0 0 20px;
+  }
+.окно_3 .боковая_кнопка.право:after
+  {
+    content       : '';
+    width         : 15px;
+    height        : 15px;
+    border-right  : 2px solid #000;
+    border-bottom : 2px solid #000;
+    display       : block;
+    transform     : rotate(-45deg);
+    margin        : 15px 0 0 15px;
+  }
+.окно_3 .боковая_кнопка.лево:hover:after,.окно_3 .боковая_кнопка.право:hover:after
+  {
+    border-color : #1e807f;
+  }
+.окно_3 .боковая_кнопка.право
+  {
+    right : -100px;
+  }
+.окно.окно_4 > div
+  {
+    padding : 20px;
+  }
+.окно_4 a + p
+  {
+    color      : red;
+    margin-top : 10px;
+  }
+.окно_4 .щет
+  {
+    vertical-align : 5px;
+  }
+.окно_4 li
+  {
+    overflow  : hidden;
+    max-width : 500px;
+    position  : relative;
+  }
+.окно_4 li a
+  {
+    color       : #4d4b4b;
+    font-weight : 600;
+  }
+.окно_4 [путь] svg
+  {
+    position      : absolute;
+    width         : 50px;
+    height        : 50px;
+    display       : block;
+    background    : #fff;
+    border-radius : 50%;
+    opacity       : .5;
+    transition    : all .5s;
+  }
+.окно_4 [путь] svg:hover
+  {
+    opacity : 1;
+    cursor  : pointer;
+    fill    : red;
+  }
+.окно_4 form
+  {
+    border          : 1px solid #e0e0e0;
+    border-radius   : 5px;
+    display         : flex;
+    justify-content : space-between;
+  }
+.окно_4 form *
+  {
+    cursor        : pointer;
+    padding       : 10px;
+    font-size     : 16px;
+    color         : #6c6d73;
+    border-radius : 5px;
+    float         : left;
+    margin        : 0;
+    background    : #fff;
+    border        : 0;
+    width         : 30px;
+    outline       : none;
+    text-align    : center;
+  }
+.окно_4 form :focus
+  {
+    box-shadow : none;
+  }
+.окно_4 form [type="text"]
+  {
+    cursor  : text;
+    width   : 30px;
+    padding : 10px 0;
+  }
+.окно_4 img
+  {
+    width : 20%;
+  }
+.окно_4 .лента_маленькой_корзины div
+  {
+    width   : 40%;
+    padding : 20px 0 20px 20px;
+  }
+.окно_4 .лента_маленькой_корзины form
+  {
+    width      : 20%;
+    margin-top : 20px;
+  }
+.окно_4 .лента_маленькой_корзины li > p
+  {
+    width       : 20%;
+    padding-top : 20px;
+  }
+.окно_4 .лента_маленькой_корзины li > *
+  {
+    float : left;
+  }
+.окно_4 .цена i
+  {
+    font-style : normal;
+  }
+.окно_4 .цена > :first-child
+  {
+    display : none;
+  }
+.окно_4 .цена :nth-child(2)
+  {
+    text-decoration : line-through;
+  }
+.окно_4 .цена :nth-child(3)
+  {
+    font-weight : 600;
+  }
+.окно_4 .цена span
+  {
+    display    : block;
+    text-align : right;
+  }
+.окно_4 .итог .очистить_корзину
+  {
+    cursor : pointer;
+  }
+.окно_4 .итог
+  {
+    display         : flex;
+    justify-content : space-between;
+    line-height     : 30px;
+  }
+.окно_4 .итог svg
+  {
+    width  : 30px;
+    height : 30px;
+  }
+.окно_4 .кнопка
+  {
+    overflow   : hidden;
+    margin-top : 15px;
+  }
+.окно_4 .кнопка :hover
+  {
+    background : #409392;
+  }
+.окно_4 .кнопка *
+  {
+    transition    : all .3s;
+    float         : right;
+    padding       : 10px 20px;
+    color         : #fff;
+    background    : #1e807f;
+    border-radius : 5px;
+  }
