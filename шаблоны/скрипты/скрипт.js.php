@@ -45,5 +45,10 @@
         $(this).toggleClass ('a');
       }
     );
+    $('body').on ('click', панель + '.шоу_Фильтр', function ()
+      {
+        console.log (`шоу_Фильтр`);
+      }
+    );
   })
 </script>

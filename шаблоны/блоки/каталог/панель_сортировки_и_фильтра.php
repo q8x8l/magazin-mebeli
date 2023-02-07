@@ -29,7 +29,7 @@
 <hr class="hr0">
 <ul class="панель_сортировки_и_фильтра">
   <li>
-    <i class="toggle">
+    <i class="toggle шоу_Фильтр">
       Фильтр
       <svg><use xlink:href="<?php echo $домен; ?>стили/svg/sprite4.svg#icon_shop_filter"></use></svg>
     </i>
