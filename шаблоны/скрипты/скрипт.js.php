@@ -35,13 +35,15 @@
     $(document).click(function (e) {
       if (!$(e.target).closest(".панель_сортировки_и_фильтра form,.панель_сортировки_и_фильтра i").length) {
         $(".панель_сортировки_и_фильтра i,.панель_сортировки_и_фильтра").removeClass('a')
-        $(".панель_сортировки_и_фильтра .toggleText").each(function() {
-          $(this).children().eq(0).removeClass('a')
+        $(".панель_сортировки_и_фильтра .toggleText").each (function() {
+          $(this).children().eq(0).removeClass('a');
         })
       }
     })
-    $('body').on ('click', панель + '.toggle', function () {
-      $(this).toggleClass ('a');
-    })
+    $('body').on ('click', панель + '.toggle', function ()
+      {
+        $(this).toggleClass ('a');
+      }
+    );
   })
 </script>
