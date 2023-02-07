@@ -45,6 +45,11 @@
         $(this).toggleClass ('a');
       }
     );
+    console.log (
+      `
+        вынесем шоу_Фильтр в аякс
+      `
+    );
     $('body').on ('click', панель + '.шоу_Фильтр', function ()
       {
         console.log (`шоу_Фильтр`);
