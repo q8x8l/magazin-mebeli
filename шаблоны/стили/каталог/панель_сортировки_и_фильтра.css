@@ -170,17 +170,18 @@ ul.панель_сортировки_и_фильтра
   }
 .панель_сортировки_и_фильтра .чекбоксы img
   {
-    margin: 0 10px 0 0;
-    height: 15px;
-    width:  15px;
+    margin-right : 5px;
+    height       : 15px;
+    width        : 15px;
   }
 .панель_сортировки_и_фильтра .чекбоксы img:after
   {
-    content    : "";
+    content    : '';
     display    : block;
     height     : 10px;
     width      : 10px;
     background : #fff;
+    border     : 0;
   }
 .панель_сортировки_и_фильтра .чекбоксы > *
   {

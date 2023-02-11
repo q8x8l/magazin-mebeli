@@ -40,9 +40,9 @@
     ?>
   </div>
   <?php
-    if ($_GET['путь']) {
-      echo '<p class="toggle бренды">Бренд' . $svg0 . '</p>';
-      echo '<div class="чекбоксы бренды"></div>';
+    if ($_GET ['путь']) {
+      echo "<p class='toggle бренды'>Бренды${svg0}</p>";
+      echo "<div class='чекбоксы бренды'></div>";
     }
   ?>
   <p class="toggle">
