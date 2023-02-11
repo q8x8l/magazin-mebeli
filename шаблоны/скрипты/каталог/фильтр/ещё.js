@@ -3,12 +3,14 @@
 	$('body').on ('click', панель + '.toggle.бренды', function ()
 		{
 			зис = $(this);
-			if (зис.hasClass (`Есть_вылет`)) return false;
+			// Запрет на вылет
+				if (зис.hasClass (`Есть_вылет`)) return false;
 			$.get (домен + 'блоки/каталог/фильтр/вылет_брендов.php',
 			  {
 			  	путь : new URLSearchParams (window.location.search).get ('путь'),
 			  	''   : '',
 			  }, (трафик) => {
+			  	зис.after (`<div class="чекбоксы бренды"></div>`);
 			  	трафик.split ('\n').forEach (function (e)
 			  		{
 			  			if (e == '') return;
@@ -24,18 +26,20 @@
 // Вылет ствола дерева
 	$('body').on ('click', панель + '.toggle.дерево', function ()
 		{
+			зис = $(this);
 			// Запрет на вылет
-				if ($(this).hasClass ('есть_ветка')) return false;
+				if (зис.hasClass ('есть_ветка')) return false;
 			$.get (домен + 'блоки/каталог/фильтр/вылет_ветки.php',
 			  {
 			  	путь 		 : new URLSearchParams (window.location.search).get ('путь'),
 			  	ветка_дерева : 1,
 			  }, (трафик) => {
-			  	$('.чекбоксы.дерево').html (трафик);
+			  	зис.after (`<div class="чекбоксы дерево"></div>`);
+			  	зис.next ().html (трафик);
 			  	Выравнивание_дерева ();
 			  }
 			);
-			$(this).addClass (`есть_ветка`);
+			зис.addClass (`есть_ветка`);
 		}
 	);
 // Есть вылет ствола

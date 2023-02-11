@@ -19,7 +19,6 @@
   <?php
     if ($_GET ['путь']) {
       echo "<p class='toggle бренды'>Бренды${svg0}</p>";
-      echo "<div class='чекбоксы бренды'></div>";
     }
   ?>
   <p class="toggle">
@@ -36,7 +35,6 @@
     Дерево категорий
     <?php echo $svg0; ?>
   </p>
-  <div class="чекбоксы дерево"></div>
   <button></button>
   <button>
     Сбросить фильтр
