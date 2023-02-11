@@ -7,26 +7,6 @@
   $svg01 = '"></use></svg>';
   $svg1 = $svg00 . 'desc' . $svg01;
   $svg2 = $svg00 . 'asc' . $svg01;
-  $k30 = 0;
-  $k31 = 0;
-  $k4 = 0;
-  $vp = '<div class="toggleText"><p class="toggle">Все</p><p><span>Да</span><span>Нет</span><span>Все</span></p></div>';
-  $m0 = [];
-  $m1 = [];
-  include ($путь_домой = '../../../../') . 'функции.php';
-  // В ходе аякса избавимся от лишней рекурсии каталога
-  рекурсия_каталога ($путь_домой . 'товары/', '', $путь = $_GET ['путь'], $фильтр, '', '');
-  foreach (explode ('^__^', $каталог) as $value) {
-    if ($value == '') continue;
-    $v = explode ('^_^', $value);
-    if ($k3 = $_GET['бренд']) if ($k3 != $v[3]) continue;
-    $m0[] = $v[3];
-    $m1[] = $v[4];
-    if (str_contains ($v[1], 'Новинка')) $k30++;
-    if (str_contains ($v[1], 'Акция'))   $k31++;
-    $k4++;
-  }
-  $каталог = [];
 ?>
 <form>
   <p class="toggle">
