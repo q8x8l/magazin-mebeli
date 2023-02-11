@@ -3,10 +3,6 @@
     <svg><use xlink:href="' . $домен . 'стили/svg/sprite5.svg#icon_shop_filter_plus"></use></svg>
     <svg><use xlink:href="' . $домен . 'стили/svg/sprite5.svg#icon_shop_filter_minus"></use></svg>
   ';
-  $svg00 = '<svg><use xlink:href="' . $домен . 'стили/svg/sprite6.svg#icon_shop_sort_';
-  $svg01 = '"></use></svg>';
-  $svg1 = $svg00 . 'desc' . $svg01;
-  $svg2 = $svg00 . 'asc' . $svg01;
 ?>
 <form>
   <p class="toggle">
