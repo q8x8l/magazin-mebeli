@@ -1,21 +1,25 @@
 панель = '.панель_сортировки_и_фильтра ';
 // Вылет ленты брендов
-	console.log (`
-		Вылет ленты брендов
-		`);
-	function лента_брендов_в_фильтре ()
+	$('body').on ('click', панель + '.toggle.бренды', function ()
 		{
-			console.log (`Вылет ленты брендов _`);
+			зис = $(this);
+			if (зис.hasClass (`Есть_вылет`)) return false;
+			$.get (домен + 'блоки/каталог/фильтр/вылет_брендов.php',
+			  {
+			  	путь : new URLSearchParams (window.location.search).get ('путь'),
+			  	''   : '',
+			  }, (трафик) => {
+			  	трафик.split ('\n').forEach (function (e)
+			  		{
+			  			if (e == '') return;
+						зис.next ().append (`<p><i>v</i><img src="${домен}../../../../бренды/${e}" /><a href="">${e}</a></p>`);
+			  		}
+			  	);
+			  }
+			);
+			зис.addClass (`Есть_вылет`);
 		}
-
-		$.get (домен + 'блоки/каталог/фильтр/вылет_брендов.php',
-		  {
-		  	путь 				 : '',
-		  	''					 : '',
-		  }, (трафик) => {
-		  	console.log (трафик);
-		  }
-		);
+	);
 // 
 // Вылет ствола дерева
 	$('body').on ('click', панель + '.toggle.дерево', function ()
@@ -24,7 +28,7 @@
 				if ($(this).hasClass ('есть_ветка')) return false;
 			$.get (домен + 'блоки/каталог/фильтр/вылет_ветки.php',
 			  {
-			  	путь 				 : new URLSearchParams (window.location.search).get ('путь'),
+			  	путь 		 : new URLSearchParams (window.location.search).get ('путь'),
 			  	ветка_дерева : 1,
 			  }, (трафик) => {
 			  	$('.чекбоксы.дерево').html (трафик);

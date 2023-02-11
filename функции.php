@@ -5,7 +5,14 @@
   foreach ($m as $k => $v) if ($v == 'шаблоны') $тайтл = trim ($m [$k + 1], '.php');
   foreach (explode (PHP_EOL, file_get_contents ('тайтлы')) as $v) if (($r = explode (':', $v))[0] == $тайтл) $тайтл = $r[1];
 
-  function рекурсия_каталога ($target, $один_из_типов_главной, $путь, $бренд) {
+  function рекурсия_каталога
+    (
+      $target,
+      $один_из_типов_главной,
+      $путь,
+      $бренд,
+    )
+    {
     global $каталог;
     if (is_dir ($target)) {
       foreach (glob ($target . '*', GLOB_MARK) as $file) {

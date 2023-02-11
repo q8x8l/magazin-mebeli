@@ -1,21 +1,18 @@
 <?php
-	include ($путь_домой = '../../../../') . 'функции.php';
+	include ($пп = '../../../../') . 'функции.php';
 	рекурсия_каталога (
-		$путь_домой . 'товары/',
+		$пп . 'товары/',
 		'',
-		$путь = $_GET ['путь'],
+		$_GET ['путь'],
 		'',
 	);
-	// Добработки
-	foreach (explode ('^__^', $каталог) as $value) {
-		if ($value == '') continue;
-		$v = explode ('^_^', $value);
-		if ($k3 = $_GET['бренд']) if ($k3 != $v[3]) continue;
-		$m0[] = $v[3];
-		$m1[] = $v[4];
-		if (str_contains ($v[1], 'Новинка')) $k30++;
-		if (str_contains ($v[1], 'Акция'))   $k31++;
-		$k4++;
-	}
-	$каталог = [];
+	$б = [];
+	foreach (explode ('^__^', $каталог) as $v)
+		{
+			$б [] = explode ('^_^', $v) [3];
+		}
+	foreach (array_unique ($б) as $k => $v)
+		{
+			echo $v . PHP_EOL;
+		}
 ?>

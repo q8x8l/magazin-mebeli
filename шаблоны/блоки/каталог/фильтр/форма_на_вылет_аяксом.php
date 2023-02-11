@@ -41,13 +41,8 @@
   </div>
   <?php
     if ($_GET['путь']) {
-      echo '<p class="toggle">Бренд' . $svg0 . '</p>';
-      echo '<div class="чекбоксы бренды">';
-        foreach (array_values (array_unique ($m0)) as $key => $v)
-          {
-            echo '<p индекс="' . $key . '"><i>v</i><img src="' . $домен . '../../../../бренды/' . $v . '" alt=" " /><a href="">' . $v . '</a></p>';
-          }
-      echo '</div>';
+      echo '<p class="toggle бренды">Бренд' . $svg0 . '</p>';
+      echo '<div class="чекбоксы бренды"></div>';
     }
   ?>
   <p class="toggle">
