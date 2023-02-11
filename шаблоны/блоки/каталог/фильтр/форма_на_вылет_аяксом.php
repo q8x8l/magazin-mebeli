@@ -3,16 +3,17 @@
     <svg><use xlink:href="' . $домен . 'стили/svg/sprite5.svg#icon_shop_filter_plus"></use></svg>
     <svg><use xlink:href="' . $домен . 'стили/svg/sprite5.svg#icon_shop_filter_minus"></use></svg>
   ';
+  $селект = "<div class='toggleText tT0'><p class='toggle'>Все</p><p><span>Нет</span><span>Да</span><span>Все</span></p></div>";
 ?>
 <form>
   <p class="toggle">
-    Цена
+    Цены
     <?php echo $svg0; ?>
   </p>
   <div>
     <?php
-      echo '<input class="keyup" type="text"">';
-      echo '<input class="keyup" type="text"">';
+      echo "<input class='keyup' type='text'>";
+      echo "<input class='keyup' type='text'>";
     ?>
   </div>
   <?php
@@ -25,16 +26,12 @@
     Новинка
     <?php echo $svg0; ?>
   </p>
-  <div class="toggleText tT0">
-    <p class="toggle">Все</p><p><span>Нет</span><span>Да</span><span>Все</span></p>
-  </div>
+  <?php echo $селект; ?>
   <p class="toggle">
     Акция
     <?php echo $svg0; ?>
   </p>
-  <div class="toggleText tT1">
-    <p class="toggle">Все</p><p><span>Нет</span><span>Да</span><span>Все</span></p>
-  </div>
+  <?php echo $селект; ?>
   <p class="toggle дерево">
     Дерево категорий
     <?php echo $svg0; ?>

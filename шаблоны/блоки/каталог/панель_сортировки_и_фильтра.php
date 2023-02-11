@@ -2,7 +2,7 @@
   $svg00 = '<svg><use xlink:href="' . $домен . 'стили/svg/sprite6.svg#icon_shop_sort_';
   $svg01 = '"></use></svg>';
   $svg1 = $svg00 . 'desc' . $svg01;
-  $svg2 = $svg00 . 'asc' . $svg01;
+  $svg2 = $svg00 . 'asc'  . $svg01;
 ?>
 <hr class="hr0">
 <ul class="панель_сортировки_и_фильтра">
