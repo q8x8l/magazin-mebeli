@@ -13,23 +13,10 @@
     </i>
   </li>
   <li>
-    <i class="toggle">
+    <i class="toggle кнопка_для_сортировки">
       Сортировка
       <svg><use xlink:href="<?php echo $домен; ?>стили/svg/sprite4.svg#icon_shop_sort"></use></svg>
     </i>
-    <form>
-      <?php
-        $условия_сортировки = [
-          [$svg1, 'Цена - убывание'],
-          [$svg2, 'Цена - возрастание'],
-          [$svg1, 'Название - Я-А'],
-          [$svg2, 'Название - А-Я'],
-        ];
-        foreach ($условия_сортировки as $e) {
-          echo '<i>' . $e[0] . $e[1] . '</i>';
-        }
-      ?>
-    </form>
     <span>
       <?php
         switch ($q0 = $_GET['сортировка'])
