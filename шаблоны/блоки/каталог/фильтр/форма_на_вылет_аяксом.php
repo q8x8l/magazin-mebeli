@@ -11,8 +11,8 @@
   </p>
   <div>
     <?php
-      echo '<input class="keyup" type="text" placeholder="От: ' . min ($m1) . '">';
-      echo '<input class="keyup" type="text" placeholder="До: ' . max ($m1) . '">';
+      echo '<input class="keyup" type="text"">';
+      echo '<input class="keyup" type="text"">';
     ?>
   </div>
   <?php
@@ -26,28 +26,14 @@
     <?php echo $svg0; ?>
   </p>
   <div class="toggleText tT0">
-    <?php
-      echo '<p class="toggle">Все</p>';
-      echo '<p>';
-        echo '<span>Нет</span>';
-        echo '<span>Да</span>';
-        echo '<span>Все</span>';
-      echo '</p>';
-    ?>
+    <p class="toggle">Все</p><p><span>Нет</span><span>Да</span><span>Все</span></p>
   </div>
   <p class="toggle">
     Акция
     <?php echo $svg0; ?>
   </p>
   <div class="toggleText tT1">
-    <?php
-      echo '<p class="toggle">Все</p>';
-      echo '<p>';
-        echo '<span>Нет</span>';
-        echo '<span>Да</span>';
-        echo '<span>Все</span>';
-      echo '</p>';
-    ?>
+    <p class="toggle">Все</p><p><span>Нет</span><span>Да</span><span>Все</span></p>
   </div>
   <p class="toggle дерево">
     Дерево категорий
