@@ -14,7 +14,7 @@
 			  	трафик.split ('\n').forEach (function (e)
 			  		{
 			  			if (e == '') return;
-						зис.next ().append (`<p><i>v</i><img src="${домен}../бренды/${e}" alt=' ' title='' /><a href="">${e}</a></p>`);
+						зис.next ().append (`<p><i class="v">v</i><img src="${домен}../бренды/${e}" alt=' ' title='' /><a href="">${e}</a></p>`);
 			  		}
 			  	);
 			  }
@@ -58,7 +58,6 @@
 				{
 					'' : '',
 				}, (трафик) => {
-					// console.log (трафик);
 					зис.after (трафик);
 				}
 			);

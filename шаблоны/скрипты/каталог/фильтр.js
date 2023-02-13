@@ -51,7 +51,7 @@ if ($(панель = '.панель_сортировки_и_фильтра ').le
   })
   $('body').on ('click', панель + '.чекбоксы.бренды i', function () {
     return false;
-    запрос_фильтра (1);
+    // запрос_фильтра (1);
   })
   $('body').on ('click', панель + '.toggleText span', function () {
     return false;
