@@ -1,22 +1,22 @@
 // Функция пробега по дереву и чека по потомкам автоматически в зависимости от родительской ветки
 	function пробег_по_дереву_и_чека_по_потомкам (парент, тег)
 		{
+			// оптимизируем
 			(ветки = $(панель + '.чекбоксы.дерево p')).each (function ()
 				{
 					if (парент == (зис = $(this))) 											  	return;
 					if ((парент_путь = парент.attr ('путь')) == (зис_путь = зис.attr ('путь'))) return;
 					if (!зис_путь.includes (парент_путь)) 										return;
-					tag_v = зис.children ().eq (1);
-					парент_класс = парент.children ().eq (1).attr ('class');
+					парент_класс = парент.attr ('class');
 					if (тег == 'плюс_минус')
 						{
 							switch (парент_класс)
 								{
 									case 'v a':
-										tag_v.addClass 	  ('a');
+										зис.addClass 	('v');
 										break;
 									case 'v':
-										tag_v.removeClass ('a');
+										зис.removeClass ('v');
 										break;
 								}
 						}
@@ -25,10 +25,10 @@
 							switch (парент_класс)
 								{
 									case 'v a':
-										tag_v.removeClass ('a');
+										зис.removeClass ('v');
 									break;
 									case 'v':
-										tag_v.addClass 	  ('a');
+										зис.addClass 	('v');
 									break;
 								}
 						}
